@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SmartWebService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8085/SmartWebService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8085/SmartWebService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8085/SmartWebService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SmartServiceModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISmartWebService_ActivateCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateCard" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_ActivateCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_DeactivateCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeactivateCard" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_DeactivateCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeactivateCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_UpdateCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCard" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_UpdateCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_DownLoadTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownLoadTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_DownLoadTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownLoadTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_UploadTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_UploadTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_CheckUploadedTemplateStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUploadedTemplateStatus" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_CheckUploadedTemplateStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUploadedTemplateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_CheckDownloadTemplateStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDownloadTemplateStatus" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_CheckDownloadTemplateStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDownloadTemplateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_GetCardHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCardHistory" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_GetCardHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCardHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_EnrollFinger_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnrollFinger" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_EnrollFinger_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnrollFingerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_GetTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ISmartWebService_GetTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISmartWebService">
+    <wsdl:operation name="ActivateCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISmartWebService/ActivateCard" message="tns:ISmartWebService_ActivateCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISmartWebService/ActivateCardResponse" message="tns:ISmartWebService_ActivateCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISmartWebService/DeactivateCard" message="tns:ISmartWebService_DeactivateCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISmartWebService/DeactivateCardResponse" message="tns:ISmartWebService_DeactivateCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISmartWebService/UpdateCard" message="tns:ISmartWebService_UpdateCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISmartWebService/UpdateCardResponse" message="tns:ISmartWebService_UpdateCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownLoadTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISmartWebService/DownLoadTemplate" message="tns:ISmartWebService_DownLoadTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISmartWebService/DownLoadTemplateResponse" message="tns:ISmartWebService_DownLoadTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISmartWebService/UploadTemplate" message="tns:ISmartWebService_UploadTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISmartWebService/UploadTemplateResponse" message="tns:ISmartWebService_UploadTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUploadedTemplateStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISmartWebService/CheckUploadedTemplateStatus" message="tns:ISmartWebService_CheckUploadedTemplateStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISmartWebService/CheckUploadedTemplateStatusResponse" message="tns:ISmartWebService_CheckUploadedTemplateStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDownloadTemplateStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISmartWebService/CheckDownloadTemplateStatus" message="tns:ISmartWebService_CheckDownloadTemplateStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISmartWebService/CheckDownloadTemplateStatusResponse" message="tns:ISmartWebService_CheckDownloadTemplateStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISmartWebService/GetCardHistory" message="tns:ISmartWebService_GetCardHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISmartWebService/GetCardHistoryResponse" message="tns:ISmartWebService_GetCardHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnrollFinger">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISmartWebService/EnrollFinger" message="tns:ISmartWebService_EnrollFinger_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISmartWebService/EnrollFingerResponse" message="tns:ISmartWebService_EnrollFinger_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISmartWebService/GetTransaction" message="tns:ISmartWebService_GetTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISmartWebService/GetTransactionResponse" message="tns:ISmartWebService_GetTransaction_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISmartWebService" type="tns:ISmartWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ActivateCard">
+      <soap:operation soapAction="http://tempuri.org/ISmartWebService/ActivateCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateCard">
+      <soap:operation soapAction="http://tempuri.org/ISmartWebService/DeactivateCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCard">
+      <soap:operation soapAction="http://tempuri.org/ISmartWebService/UpdateCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownLoadTemplate">
+      <soap:operation soapAction="http://tempuri.org/ISmartWebService/DownLoadTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadTemplate">
+      <soap:operation soapAction="http://tempuri.org/ISmartWebService/UploadTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUploadedTemplateStatus">
+      <soap:operation soapAction="http://tempuri.org/ISmartWebService/CheckUploadedTemplateStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDownloadTemplateStatus">
+      <soap:operation soapAction="http://tempuri.org/ISmartWebService/CheckDownloadTemplateStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardHistory">
+      <soap:operation soapAction="http://tempuri.org/ISmartWebService/GetCardHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnrollFinger">
+      <soap:operation soapAction="http://tempuri.org/ISmartWebService/EnrollFinger" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <soap:operation soapAction="http://tempuri.org/ISmartWebService/GetTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SmartWebService">
+    <wsdl:port name="BasicHttpBinding_ISmartWebService" binding="tns:BasicHttpBinding_ISmartWebService">
+      <soap:address location="http://localhost:8085/SmartWebService.svc/SmartWebService.SmartWebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

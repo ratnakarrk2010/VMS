@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{580A4EED-A350-4ABA-BE81-28B3F28D41BA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EntityFrameworkDBF</RootNamespace>
+    <AssemblyName>EntityFrameworkDBF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\DVSC 11102017 - Copy\EntityFrameworkDBF\EntityFrameworkDBF\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AJAXExtensionsToolbox">
+      <HintPath>..\..\..\DVSC 11102017 - Copy\EntityFrameworkDBF\EntityFrameworkDBF\bin\AJAXExtensionsToolbox.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FargoNetAPI">
+      <HintPath>C:\Program Files\HID Global\HID Developer Studio - FARGO Printers and Drivers SDK Version 2\bin\dotnet\4_0\FargoNetAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common">
+      <HintPath>C:\Users\SSPL\Downloads\Microsoft.ReportViewer.WinForms.10.0.40219.1\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <HintPath>C:\Users\SSPL\Downloads\Microsoft.ReportViewer.WinForms.10.0.40219.1\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="ACTIVATION MODULE\ACTIAVTE_HOME.aspx" />
+    <Content Include="ACTIVATION MODULE\BULKACTIAVTE_HOME.aspx" />
+    <Content Include="ADMIN PANEL\ADMIN_PANEL_HOME.aspx" />
+    <Content Include="ADMIN PANEL\CANCELREASON.aspx" />
+    <Content Include="ADMIN PANEL\PSU.aspx" />
+    <Content Include="ADMIN PANEL\RELIGION.aspx" />
+    <Content Include="Crop\BitMapHandler.txt" />
+    <Content Include="Crop\ImageHandler.txt" />
+    <Content Include="Crop\jquery-1.7.1.intellisense.js" />
+    <Content Include="Crop\jquery-1.7.1.js" />
+    <Content Include="Crop\jquery-1.7.1.min.js" />
+    <Content Include="Crop\jquery-ui-1.8.20.js" />
+    <Content Include="Crop\jquery-ui-1.8.20.min.js" />
+    <Content Include="Crop\jquery.Jcrop.css" />
+    <Content Include="Crop\jquery.Jcrop.js" />
+    <Content Include="Crop\modernizr-2.5.3.js" />
+    <Content Include="Crop\_references.js" />
+    <Content Include="FOREIGN VISITOR\ForeignVisitor.aspx" />
+    <Content Include="FOREIGN VISITOR\FOR_HOME.aspx" />
+    <Content Include="FOREIGN VISITOR\visitorUpdate.aspx" />
+    <Content Include="image.aspx" />
+    <Content Include="ImageConversions.aspx" />
+    <Content Include="Images\Footer1.jpg" />
+    <Content Include="Images\FooterBlue.jpg" />
+    <Content Include="Images\FooterGreen.jpg" />
+    <Content Include="Images\FooterPink - Copy.jpg" />
+    <Content Include="Images\FooterPink.jpg" />
+    <Content Include="Images\FooterYellow - Copy.jpg" />
+    <Content Include="Images\FooterYellow.jpg" />
+    <Content Include="Images\FooterYellow1.jpg" />
+    <Content Include="Images\HeaderBlue.jpg" />
+    <Content Include="Images\HeaderGreen 1.jpg" />
+    <Content Include="Images\HeaderGreen.jpg" />
+    <Content Include="Images\HeaderPink.jpg" />
+    <Content Include="Images\HeaderRed.jpg" />
+    <Content Include="Images\HeaderYellow 1.jpg" />
+    <Content Include="Images\HeaderYellow.jpg" />
+    <Content Include="Images\SING_CSO.png" />
+    <Content Include="ISSUES MODULE\ImageConversions.aspx" />
+    <Content Include="LOGIN.aspx" />
+    <Content Include="ADMIN PANEL\ROLE.aspx" />
+    <Content Include="ADMIN PANEL\DESIGNATION.aspx" />
+    <Content Include="ADMIN PANEL\FIRM.aspx" />
+    <Content Include="ADMIN PANEL\DOCUMENT.aspx" />
+    <Content Include="ADMIN PANEL\SHOP.aspx" />
+    <Content Include="ADMIN PANEL\PASSTYPE.aspx" />
+    <Content Include="ADMIN PANEL\STATE.aspx" />
+    <Content Include="ADMIN PANEL\COUNTRY.aspx" />
+    <Content Include="ADMIN PANEL\USERMASTER.aspx" />
+    <Content Include="App_Themes\Admin_Basic\commonCSS.css" />
+    <Content Include="App_Themes\Admin_Basic\lightbox.css" />
+    <Content Include="App_Themes\Admin_Basic\menu.css" />
+    <Content Include="App_Themes\Admin_Basic\mouseovertabs.css" />
+    <Content Include="App_Themes\Admin_Basic\sdmenu.css" />
+    <Content Include="App_Themes\Admin_Basic\Style12.css" />
+    <Content Include="CANCELLATION MODULE\CANCEL_HOME.aspx" />
+    <Content Include="DESIGNATION.aspx" />
+    <Content Include="DVSC_HOME.aspx" />
+    <Content Include="images2\BAN1.png" />
+    <Content Include="images2\BAN2.png" />
+    <Content Include="images2\BAN3.png" />
+    <Content Include="images2\green_light.png" />
+    <Content Include="images2\green_light2.png" />
+    <Content Include="images2\left_arrow.png" />
+    <Content Include="images2\menu_li_bg.jpg" />
+    <Content Include="images2\menu_li_bg2.jpg" />
+    <Content Include="images2\orange-circle.png" />
+    <Content Include="images2\red_light.png" />
+    <Content Include="images2\red_light2.png" />
+    <Content Include="images2\right_arrow.png" />
+    <Content Include="images2\templatemo_banner_bg.jpg" />
+    <Content Include="images2\templatemo_button_01.png" />
+    <Content Include="images2\templatemo_button_02.jpg" />
+    <Content Include="images2\templatemo_button_02.png" />
+    <Content Include="images2\templatemo_computer.jpg" />
+    <Content Include="images2\templatemo_content_top_bg.jpg" />
+    <Content Include="images2\templatemo_frame_01.png" />
+    <Content Include="images2\templatemo_header_bg.jpg" />
+    <Content Include="images2\templatemo_header_bg2.jpg" />
+    <Content Include="images2\templatemo_header_bg3.jpg" />
+    <Content Include="images2\templatemo_header_bg_rev.jpg" />
+    <Content Include="images2\templatemo_image_01.jpg" />
+    <Content Include="images2\templatemo_list_icon.jpg" />
+    <Content Include="images2\templatemo_logo.jpg" />
+    <Content Include="images2\templatemo_menu_hover_full.jpg" />
+    <Content Include="images2\templatemo_menu_hover_full2.jpg" />
+    <Content Include="images2\templatemo_menu_hover_full3.jpg" />
+    <Content Include="images2\templatemo_menu_hover_left.jpg" />
+    <Content Include="images2\templatemo_menu_hover_right.jpg" />
+    <Content Include="images2\templatemo_project_icon.jpg" />
+    <Content Include="images2\templatemo_service_1.jpg" />
+    <Content Include="images2\templatemo_service_1_blank.jpg" />
+    <Content Include="images2\templatemo_service_2.jpg" />
+    <Content Include="images2\templatemo_service_2_blank.jpg" />
+    <Content Include="images2\templatemo_service_3.jpg" />
+    <Content Include="images2\templatemo_service_3_blank.jpg" />
+    <Content Include="images2\Thumb-Green.png" />
+    <Content Include="images2\Thumb-Green2.png" />
+    <Content Include="images2\Thumb-Grey.png" />
+    <Content Include="images2\Thumb-Grey2.png" />
+    <Content Include="images2\Thumb-Org.png" />
+    <Content Include="images2\Thumb-Org2.png" />
+    <Content Include="images2\Thumb-Red2 - Copy.png" />
+    <Content Include="images2\Thumb-Red2.png" />
+    <Content Include="images2\VMS_psd.png" />
+    <Content Include="images2\VMS_psd2.png" />
+    <Content Include="Images\11.jpg" />
+    <Content Include="Images\22.jpg" />
+    <Content Include="Images\33.jpg" />
+    <Content Include="Images\44.jpg" />
+    <Content Include="Images\55.jpg" />
+    <Content Include="Images\arrow-dn.gif" />
+    <Content Include="Images\arrow-up.gif" />
+    <Content Include="Images\BAN3.png" />
+    <Content Include="Images\biometric-readers-logo-latest.gif" />
+    <Content Include="Images\Blue.png" />
+    <Content Include="Images\cancel-btn.png" />
+    <Content Include="Images\cctv-systems-about-us-evi.gif" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\down.png" />
+    <Content Include="Images\Edit.gif" />
+    <Content Include="Images\expand.jpg" />
+    <Content Include="Images\green-square.png" />
+    <Content Include="Images\Green.png" />
+    <Content Include="Images\green_light.jpg" />
+    <Content Include="Images\loader.gif" />
+    <Content Include="Images\loading1.gif" />
+    <Content Include="Images\loading51.gif" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\New_Visitor.png" />
+    <Content Include="Images\noPhoto.jpg" />
+    <Content Include="Images\orange-circle.png" />
+    <Content Include="Images\Pink.png" />
+    <Content Include="Images\Plus.png" />
+    <Content Include="Images\print.gif" />
+    <Content Include="Images\red-triangle.png" />
+    <Content Include="Images\Red.png" />
+    <Content Include="Images\red_light.jpg" />
+    <Content Include="Images\refresh-btn.png" />
+    <Content Include="Images\search_magnify.jpg" />
+    <Content Include="Images\select.gif" />
+    <Content Include="Images\sign karan only.jpg" />
+    <Content Include="Images\sign karan.jpg" />
+    <Content Include="Images\textbox.png" />
+    <Content Include="Images\textbox1.png" />
+    <Content Include="Images\textbox2.png" />
+    <Content Include="Images\textbox3.png" />
+    <Content Include="Images\textbox4.png" />
+    <Content Include="Images\update.png" />
+    <Content Include="Images\view-button-png-hi.png" />
+    <Content Include="Images\vm-logo.png" />
+    <Content Include="Images\VMS_psd.png" />
+    <Content Include="Images\VMS_psd2.png" />
+    <Content Include="Images\zoom.gif" />
+    <Content Include="ISSUES MODULE\CONTRACTOR.aspx" />
+    <Content Include="ISSUES MODULE\ISSUE_HOME.aspx" />
+    <Content Include="jquery-ui.css" />
+    <Content Include="jquery-ui.js" />
+    <Content Include="jquery.min.js" />
+    <Content Include="Operator_Home.aspx" />
+    <Content Include="PrintPass_ForeignVisitor.aspx" />
+    <Content Include="PRINT\PRINT_HOME.aspx" />
+    <Content Include="Print_BankPass.aspx" />
+    <Content Include="Print_ContractorPass.aspx" />
+    <Content Include="Print_DBPass.aspx" />
+    <Content Include="Print_EscortedPass.aspx" />
+    <Content Include="RENEWAL\CommanRenew.aspx" />
+    <Content Include="RENEWAL\CONTRACTOR.aspx" />
+    <Content Include="RENEWAL\GetImage.aspx" />
+    <Content Include="RENEWAL\ImageConversions.aspx" />
+    <Content Include="RENEWAL\RENEWAL_HOME.aspx" />
+    <Content Include="RENEWAL\ShowApplication.aspx" />
+    <Content Include="REPORTS\ReportTemplateCardStatus.aspx" />
+    <Content Include="REPORTS\REPORT_HOME.aspx" />
+    <Content Include="REPORTS\TemplateCardStatus.aspx" />
+    <Content Include="REPORT_HOME.aspx" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.19.custom.min.js" />
+    <Content Include="Scripts\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.autocomplete.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.timepicker.css" />
+    <Content Include="Scripts\jquery.timepicker.js" />
+    <Content Include="Scripts\jquery.timepicker.min.css" />
+    <Content Include="Scripts\jquery.timepicker.min.js" />
+    <Content Include="Scripts\jquery1.min.js" />
+    <Content Include="Scripts\s3Slider.js" />
+    <Content Include="Scripts\Script.js" />
+    <Content Include="ISSUES MODULE\ShowApplication.aspx" />
+    <None Include="App_Code\DSPrint.xss" />
+    <EntityDeploy Include="DVSC_PMS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DVSC_PMS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Images\Footer.psd" />
+    <None Include="Images\HeaderBlue.psd" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Service References\ServiceReference1\EntityFrameworkDBF.ServiceReference1.CardStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\EntityFrameworkDBF.ServiceReference1.DeviceActivateCardClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\EntityFrameworkDBF.ServiceReference1.Enroll_Error_Code.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\EntityFrameworkDBF.ServiceReference1.TemplateStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\EntityFrameworkDBF.ServiceReference1.TransactionTable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\SmartWebService.disco" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Styles\jquery-ui-1.8.19.custom.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\templatemo_style.css" />
+    <Content Include="visitorUpdate.aspx" />
+    <Content Include="VisitorVPass.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="UserControls\WebcamResources\save_picture.swf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ACTIVATION MODULE\ACTIAVTE_HOME.aspx.cs">
+      <DependentUpon>ACTIAVTE_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ACTIVATION MODULE\ACTIAVTE_HOME.aspx.designer.cs">
+      <DependentUpon>ACTIAVTE_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ACTIVATION MODULE\BULKACTIAVTE_HOME.aspx.cs">
+      <DependentUpon>BULKACTIAVTE_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ACTIVATION MODULE\BULKACTIAVTE_HOME.aspx.designer.cs">
+      <DependentUpon>BULKACTIAVTE_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\ADMIN_PANEL_HOME.aspx.cs">
+      <DependentUpon>ADMIN_PANEL_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\ADMIN_PANEL_HOME.aspx.designer.cs">
+      <DependentUpon>ADMIN_PANEL_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\CANCELREASON.aspx.cs">
+      <DependentUpon>CANCELREASON.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\CANCELREASON.aspx.designer.cs">
+      <DependentUpon>CANCELREASON.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\PSU.aspx.cs">
+      <DependentUpon>PSU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\PSU.aspx.designer.cs">
+      <DependentUpon>PSU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\RELIGION.aspx.cs">
+      <DependentUpon>RELIGION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\RELIGION.aspx.designer.cs">
+      <DependentUpon>RELIGION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DVSC_PMS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DVSC_PMS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="FOREIGN VISITOR\ForeignVisitor.aspx.cs">
+      <DependentUpon>ForeignVisitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOREIGN VISITOR\ForeignVisitor.aspx.designer.cs">
+      <DependentUpon>ForeignVisitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOREIGN VISITOR\FOR_HOME.aspx.cs">
+      <DependentUpon>FOR_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOREIGN VISITOR\FOR_HOME.aspx.designer.cs">
+      <DependentUpon>FOR_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOREIGN VISITOR\visitorUpdate.aspx.cs">
+      <DependentUpon>visitorUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOREIGN VISITOR\visitorUpdate.aspx.designer.cs">
+      <DependentUpon>visitorUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Get_CVImages.ashx.cs">
+      <DependentUpon>Get_CVImages.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Get_CV_Image.ashx.cs">
+      <DependentUpon>Get_CV_Image.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="image.aspx.cs">
+      <DependentUpon>image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="image.aspx.designer.cs">
+      <DependentUpon>image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageConversions.aspx.cs">
+      <DependentUpon>ImageConversions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ISSUES MODULE\ImageConversions.aspx.cs">
+      <DependentUpon>ImageConversions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LOGIN.aspx.cs">
+      <DependentUpon>LOGIN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LOGIN.aspx.designer.cs">
+      <DependentUpon>LOGIN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\ROLE.aspx.cs">
+      <DependentUpon>ROLE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\ROLE.aspx.designer.cs">
+      <DependentUpon>ROLE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\DESIGNATION.aspx.cs">
+      <DependentUpon>DESIGNATION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\DESIGNATION.aspx.designer.cs">
+      <DependentUpon>DESIGNATION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\FIRM.aspx.cs">
+      <DependentUpon>FIRM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\FIRM.aspx.designer.cs">
+      <DependentUpon>FIRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\DOCUMENT.aspx.cs">
+      <DependentUpon>DOCUMENT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\DOCUMENT.aspx.designer.cs">
+      <DependentUpon>DOCUMENT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\SHOP.aspx.cs">
+      <DependentUpon>SHOP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\SHOP.aspx.designer.cs">
+      <DependentUpon>SHOP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\PASSTYPE.aspx.cs">
+      <DependentUpon>PASSTYPE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\PASSTYPE.aspx.designer.cs">
+      <DependentUpon>PASSTYPE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\STATE.aspx.cs">
+      <DependentUpon>STATE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\STATE.aspx.designer.cs">
+      <DependentUpon>STATE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\COUNTRY.aspx.cs">
+      <DependentUpon>COUNTRY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\COUNTRY.aspx.designer.cs">
+      <DependentUpon>COUNTRY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN PANEL\USERMASTER.aspx.cs">
+      <DependentUpon>USERMASTER.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN PANEL\USERMASTER.aspx.designer.cs">
+      <DependentUpon>USERMASTER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CANCELLATION MODULE\CANCEL_HOME.aspx.cs">
+      <DependentUpon>CANCEL_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CANCELLATION MODULE\CANCEL_HOME.aspx.designer.cs">
+      <DependentUpon>CANCEL_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetApplicationData.ashx.cs">
+      <DependentUpon>GetApplicationData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetApplicationImages.ashx.cs">
+      <DependentUpon>GetApplicationImages.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DESIGNATION.aspx.cs">
+      <DependentUpon>DESIGNATION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DESIGNATION.aspx.designer.cs">
+      <DependentUpon>DESIGNATION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DropDownFunction.cs" />
+    <Compile Include="DVSC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DVSC.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DVSC_HOME.aspx.cs">
+      <DependentUpon>DVSC_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DVSC_HOME.aspx.designer.cs">
+      <DependentUpon>DVSC_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetImages.ashx.cs">
+      <DependentUpon>GetImages.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ISSUES MODULE\CONTRACTOR.aspx.cs">
+      <DependentUpon>CONTRACTOR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ISSUES MODULE\CONTRACTOR.aspx.designer.cs">
+      <DependentUpon>CONTRACTOR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ISSUES MODULE\ISSUE_HOME.aspx.cs">
+      <DependentUpon>ISSUE_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ISSUES MODULE\ISSUE_HOME.aspx.designer.cs">
+      <DependentUpon>ISSUE_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operator_Home.aspx.cs">
+      <DependentUpon>Operator_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operator_Home.aspx.designer.cs">
+      <DependentUpon>Operator_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPass_ForeignVisitor.aspx.cs">
+      <DependentUpon>PrintPass_ForeignVisitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPass_ForeignVisitor.aspx.designer.cs">
+      <DependentUpon>PrintPass_ForeignVisitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PRINT\PRINT_HOME.aspx.cs">
+      <DependentUpon>PRINT_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PRINT\PRINT_HOME.aspx.designer.cs">
+      <DependentUpon>PRINT_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print_BankPass.aspx.cs">
+      <DependentUpon>Print_BankPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print_BankPass.aspx.designer.cs">
+      <DependentUpon>Print_BankPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print_ContractorPass.aspx.cs">
+      <DependentUpon>Print_ContractorPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print_ContractorPass.aspx.designer.cs">
+      <DependentUpon>Print_ContractorPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print_DBPass.aspx.cs">
+      <DependentUpon>Print_DBPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print_DBPass.aspx.designer.cs">
+      <DependentUpon>Print_DBPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print_EscortedPass.aspx.cs">
+      <DependentUpon>Print_EscortedPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print_EscortedPass.aspx.designer.cs">
+      <DependentUpon>Print_EscortedPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ISSUES MODULE\ShowApplication.aspx.cs">
+      <DependentUpon>ShowApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ISSUES MODULE\ShowApplication.aspx.designer.cs">
+      <DependentUpon>ShowApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RENEWAL\CommanRenew.aspx.cs">
+      <DependentUpon>CommanRenew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RENEWAL\CommanRenew.aspx.designer.cs">
+      <DependentUpon>CommanRenew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RENEWAL\GetImage.aspx.cs">
+      <DependentUpon>GetImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RENEWAL\GetImage.aspx.designer.cs">
+      <DependentUpon>GetImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RENEWAL\ImageConversions.aspx.cs">
+      <DependentUpon>ImageConversions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RENEWAL\ImageConversions.aspx.designer.cs">
+      <DependentUpon>ImageConversions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RENEWAL\RENEWAL_HOME.aspx.cs">
+      <DependentUpon>RENEWAL_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RENEWAL\RENEWAL_HOME.aspx.designer.cs">
+      <DependentUpon>RENEWAL_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RENEWAL\ShowApplication.aspx.cs">
+      <DependentUpon>ShowApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RENEWAL\ShowApplication.aspx.designer.cs">
+      <DependentUpon>ShowApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\ParameterDetails.cs" />
+    <Compile Include="REPORTS\ParameterDetails_2.cs" />
+    <Compile Include="REPORTS\ReportTemplateCardStatus.aspx.cs">
+      <DependentUpon>ReportTemplateCardStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS\ReportTemplateCardStatus.aspx.designer.cs">
+      <DependentUpon>ReportTemplateCardStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\REPORT_HOME.aspx.cs">
+      <DependentUpon>REPORT_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS\REPORT_HOME.aspx.designer.cs">
+      <DependentUpon>REPORT_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\TemplateCardStatus.aspx.cs">
+      <DependentUpon>TemplateCardStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS\TemplateCardStatus.aspx.designer.cs">
+      <DependentUpon>TemplateCardStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT_HOME.aspx.cs">
+      <DependentUpon>REPORT_HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORT_HOME.aspx.designer.cs">
+      <DependentUpon>REPORT_HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="smartaccess.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smartaccess.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="visitorUpdate.aspx.cs">
+      <DependentUpon>visitorUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="visitorUpdate.aspx.designer.cs">
+      <DependentUpon>visitorUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorVPass.aspx.cs">
+      <DependentUpon>VisitorVPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisitorVPass.aspx.designer.cs">
+      <DependentUpon>VisitorVPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VMSMaster.master.cs">
+      <DependentUpon>VMSMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DVSC.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DVSC.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Admin_Basic\SkinFile.skin" />
+    <None Include="App_Themes\Admin_Basic\Thumbs.db" />
+    <Content Include="GetImages.ashx" />
+    <Content Include="GetApplicationImages.ashx" />
+    <Content Include="GetApplicationData.ashx" />
+    <Content Include="Get_CVImages.ashx" />
+    <Content Include="Get_CV_Image.ashx" />
+    <None Include="Images\1.jpg.exclude" />
+    <EntityDeploy Include="smartaccess.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>smartaccess.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Service References\ServiceReference1\SmartWebService.wsdl" />
+    <None Include="Service References\ServiceReference1\SmartWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\SmartWebService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\SmartWebService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Styles\templatemo_style.css.bak" />
+    <Content Include="VMSMaster.master" />
+    <Content Include="Universal_imgHandler.ashx" />
+    <None Include="VMSDataSet.xsc">
+      <DependentUpon>VMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VMSDataSet.xss">
+      <DependentUpon>VMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UserControls\WebcamResources\save_picture.fla" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="REPORTS\IndividualReport.rdlc" />
+    <EmbeddedResource Include="VisitorVReport.rdlc" />
+    <EmbeddedResource Include="VReports.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Db\Db.csproj">
+      <Project>{E2BDBF6D-5180-46F6-AE38-78FD58201933}</Project>
+      <Name>Db</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9050</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/DVSC</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,880 @@
+/*
+CSS Credit: http://www.templatemo.com/
+*/
+html
+{
+    overflow: scroll;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #333;
+    background: #ffffff;
+    overflow: scroll;
+}
+
+a:link, a:visited
+{
+    color: #d05c2d;
+    text-decoration: underline;
+    font-weight: normal;
+}
+a:active, a:hover
+{
+    color: #990000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+p
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+img
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.cleaner
+{
+    clear: both;
+    width: 100%;
+    height: 0px;
+    font-size: 0px;
+}
+
+.margin_bottom_10
+{
+    clear: both;
+    width: 100%;
+    height: 10px;
+    font-size: 1px;
+}
+.margin_bottom_20
+{
+    clear: both;
+    width: 100%;
+    height: 20px;
+    font-size: 1px;
+}
+.margin_bottom_30
+{
+    clear: both;
+    width: 100%;
+    height: 30px;
+    font-size: 1px;
+}
+.margin_bottom_40
+{
+    clear: both;
+    width: 100%;
+    height: 40px;
+    font-size: 1px;
+}
+.margin_bottom_50
+{
+    clear: both;
+    width: 100%;
+    height: 50px;
+    font-size: 1px;
+}
+.margin_bottom_60
+{
+    clear: both;
+    width: 100%;
+    height: 60px;
+    font-size: 1px;
+}
+
+.margin_right_10
+{
+    margin-right: 10px;
+}
+.margin_right_60
+{
+    margin-right: 60px;
+}
+
+.border_bottom
+{
+    border-bottom: 1px solid #999;
+    margin-bottom: 10px;
+}
+
+.text_rl
+{
+    text-align: right;
+}
+
+.fl
+{
+    float: left;
+}
+.fr
+{
+    float: right;
+}
+
+.rc_btn_01 a
+{
+    clear: both;
+    float: right;
+    display: block;
+    width: 152px;
+    height: 37px;
+    padding: 18px 0 0 0;
+    font-size: 12px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    background: url(../images2/templatemo_button_01.png) no-repeat;
+}
+
+.rc_btn_02 a
+{
+    clear: both;
+    float: right;
+    display: block;
+    width: 140px;
+    height: 35px;
+    padding: 17px 0 0 0;
+    font-size: 13px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    background: url(../images2/templatemo_button_02.jpg) no-repeat;
+}
+
+.header_01
+{
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.header_02
+{
+    padding: 0px 0 0px 0; /*margin: 0 0 15px 0;*/
+    font-size: 20px;
+    color: #a39a19;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.header_03
+{
+    padding: 0 0 5px 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fd4800;
+}
+
+#templatemo_header_wrapper
+{
+    width: 100%;
+    margin: 0 auto;
+    background: url(../images2/templatemo_header_bg_rev.jpg) repeat-x;
+    height: 110px;
+    background-size: 100% 100%;
+}
+
+#templatemo_header
+{
+    width: 1150px;
+    height: 92px;
+    padding: 5px 0px 0 0px;
+    margin: 0 auto;
+    background: url(../images2/VMS_psd2_New_1.png) repeat-x;
+    
+    background-size: 100% 100%;
+}
+
+#templatemo_header #logo
+{
+    float: left;
+    width: 300px;
+    height: 48px;
+    background: url(../images2/templatemo_logo.jpg) left top no-repeat;
+}
+
+.UserView
+{
+    width: 100%;
+    height: 100%;
+}
+.UserView > span
+{
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.UserView span *
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.UserView span a:hover
+{
+    color: #990000;
+    text-decoration: none;
+}
+/* menu */
+
+#templatemo_header #templatemo_menu
+{
+    float: right;
+    width: 600px;
+    height: 48px;
+    margin-top: -1px;
+    margin-right: 75px;
+}
+
+.menu
+{
+    float: right;
+    margin-top: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.menu > li
+{
+    display: inline-block;
+    padding: 4px 0px 24px;
+}
+
+.menu > li > a
+{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 15px 15px;
+}
+
+.menu > li > a.current
+{
+    background-image: url(../images2/templatemo_menu_hover_full3.jpg);
+    background-size: 100% 100%;
+}
+
+.menu > li > a:hover
+{
+    position: relative;
+    color: #000;
+    background-image: url(../images2/templatemo_menu_hover_full3.jpg);
+    background-size: 100% 100%;
+}
+
+.menu li > ul
+{
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 24px;
+    display: none;
+    border-radius: 5px;
+    background-color: #656565;
+    z-index: 100;
+}
+
+.menu li > ul > li
+{
+    padding: 0px;
+    background-color: #656565;
+    border-radius: 5px;
+}
+
+.menu li > ul > li a
+{
+    background-image: url(../images2/menu_li_bg2.jpg);
+    background-size: 100% 100%;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    margin: 3px;
+    max-width: 220px;
+    height: 20px;
+}
+.menu li > ul > li a:hover
+{
+    color: #000000;
+}
+
+.menu > li:hover ul
+{
+    display: block;
+}
+
+/*#templatemo_menu li a:hover span, #templatemo_menu li .current span	{
+	position: absolute;
+	display: inline-block;
+	width: 7px;
+	height: 48px;
+	bottom: 0px;
+	left: -7px;
+	background: url(../images2/templatemo_menu_hover_left.jpg) left bottom no-repeat;
+}*/
+
+.menu ul
+{
+    position: absolute;
+}
+
+/* end of menu */
+
+/* banner */
+#templatemo_banner_wrapper
+{
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+#templatemo_banner
+{
+    width: 1150px;
+    height: auto;
+    margin: 0 auto;
+    background: #ffffff url(../images2/templatemo_banner_bg.jpg) no-repeat;
+    box-shadow: 0px 0px 4px 1px grey !important;
+}
+
+#templatemo_banner #banner_content
+{
+    float: right;
+    width: 435px;
+    padding: 40px 0 0 0;
+    margin-right: 80px;
+}
+
+#banner_content #banner_title
+{
+    font-size: 24px;
+    padding: 10px 0 35px 0;
+}
+
+#banner_content #banner_text
+{
+    text-align: justify;
+    font-size: 11px;
+}
+/* end of banner */
+
+/* content top */
+#templatemo_content_top_wrapper
+{
+    clear: both;
+    width: 100%;
+    height: 220px;
+    margin: 0 auto;
+    background: url(../images2/templatemo_content_top_bg.jpg) repeat-x;
+}
+
+#templatemo_content_top
+{
+    width: 940px;
+    margin: 0 auto;
+    padding: 40px 20px 0 20px;
+}
+
+#templatemo_content_top p
+{
+    color: #000000;
+}
+
+/* end of content top */
+
+/* content */
+
+#templatemo_content_wrapper
+{
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+#templatemo_content
+{
+    width: 1150px;
+    margin: 0 auto;
+    padding: 10px 20px 0 20px;
+}
+
+.content_col_w420
+{
+    width: 440px;
+}
+
+.service_box
+{
+    width: 310px;
+    height: 45px;
+    margin: auto;
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 9px 11px -6px !important;
+}
+.service_box7
+{
+    width: 310px;
+    height: 130px;
+    margin: auto;
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 9px 11px -6px !important;
+}
+.service_box1
+{
+    width: 310px;
+    height: 80px;
+    margin: auto;
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 9px 11px -6px !important;
+}
+
+.two-box
+{
+    background: url(../images2/Thumb-Org2.png);
+    background-size: 50% 100%;
+}
+
+.box-1
+{
+    background: url(../images2/Thumb-Org2.png) no-repeat;
+    background-size: 100% 100%;
+}
+.box-2
+{
+    background: url(../images2/Thumb-Grey2.png) no-repeat;
+    background-size: 100% 100%;
+}
+.box-3
+{
+    background: url(../images2/Thumb-Green2.png) no-repeat;
+    background-size: 100% 100%;
+}
+.box-4
+{
+    background: url(../images2/Thumb-Red2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.service_box strong
+{
+    display: block;
+    text-align: center;
+    color: #ffffff;
+}
+
+.sub-box
+{
+    width: 100%;
+    height: 87px;
+    display: inline-block;
+}
+.sub-box > a
+{
+    display: block;
+    text-align: center;
+    color: rgb(255, 255, 255) !important;
+    font-size: 26px !important;
+    padding-top: 40px;
+}
+
+.sub-box div
+{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.sub-box div a
+{
+    display: block;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    padding-top: 22px;
+}
+
+.sub-box div span
+{
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.table-box tr td
+{
+    padding: 10px;
+}
+
+.testimonial_box_wrapper
+{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.testimonial_box
+{
+    padding: 10px 10px;
+    background: #e0e0e0;
+    margin-bottom: 2px;
+    min-height: 470px;
+}
+
+.testimonial_box a
+{
+    font-size: 13px;
+    font-weight: bold;
+    color: #fd4800;
+    text-decoration: none;
+}
+
+.image_wrapper_01
+{
+    position: relative;
+    width: 441px;
+    height: 170px;
+    background: url(../images2/templatemo_frame_01.png) no-repeat;
+}
+
+.image_wrapper_01 img
+{
+    position: absolute;
+    width: 412px;
+    height: 117px;
+    top: 10px;
+    left: 10px;
+}
+
+.section_w140
+{
+    width: 140px;
+}
+
+.section_w140 .project_icon
+{
+    width: 135px;
+    height: 140px;
+    background: url(../images2/templatemo_project_icon.jpg) no-repeat;
+}
+
+.section_w220
+{
+    width: 220px;
+}
+
+.section_w280
+{
+    width: 280px;
+}
+
+.section_w280 .future_project
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.future_project li
+{
+    margin: 0 0 5px 0;
+    padding: 0px;
+}
+
+.other_project_list
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.other_project_list li
+{
+    margin: 0 0 0 0;
+    padding: 5px 0 3px 25px;
+    background: url(../images2/templatemo_list_icon.jpg) left center no-repeat;
+}
+
+.other_project_list li a
+{
+    color: #333;
+    text-decoration: none;
+}
+
+.other_project_list li a:hover
+{
+    color: #990000;
+}
+
+/* end of content */
+
+/* footer */
+
+#templatemo_footer_wrapper
+{
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    background: #656565;
+    border-top: 10px solid #ea6a37;
+}
+
+#templatemo_footer
+{
+    width: 1150px;
+    margin: 0 auto;
+    padding: 20px 20px 20px 20px;
+    background: #656565;
+    color: #ffffff;
+}
+
+#templatemo_footer a
+{
+    color: #e5b614;
+}
+
+.normal_list
+{
+    margin: 0 0 0 30px;
+    padding: 0px;
+    list-style: disc;
+}
+
+.normal_list li
+{
+    padding: 3px 0;
+    margin: 0;
+}
+
+#templatemo_footer .normal_list li a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact
+{
+    text-align: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.contact li
+{
+    padding: 3px 0;
+}
+/* end of footer */
+
+
+/************custom control*************/
+.labelProp
+{
+    font-size: x-large;
+    font-weight: bold;
+}
+.btnView
+{
+    background-image: url('../images2/templatemo_button_02.png') no-repeat;
+    background-size: 100% 100%;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 50px;
+}
+
+.btnView:hover
+{
+    color: #ffffff;
+}
+
+.txtView
+{
+    background-color: #ffffff;
+    border: 1px solid #abadb3;
+}
+
+.textarea
+{
+    height: 34px !important;
+}
+
+.drpView
+{
+    height: 23px !important;
+}
+
+.GridTableView
+{
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.GridTableView tr th
+{
+    background-color: #ea6b38;
+    border-top: 1px solid #000000;
+    border-bottom: 2px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #ffffff;
+}
+
+.GridTableView tr td
+{
+    border: 1px solid #000000;
+    border: 1px solid #000000;
+    color: #4d4d4d;
+}
+.pager table
+{
+    margin: auto;
+}
+.pager table tr td a
+{
+    padding: 5px;
+    color: #ea6b38 !important;
+}
+.pager table tr td span
+{
+    padding: 5px;
+    color: Blue !important;
+}
+.tbl-full
+{
+    width: 100%;
+}
+
+.tbl-form > tr > td
+{
+    padding: 5px;
+}
+
+.tbl-form > tr > td > span
+{
+    font-family: Arial !important;
+    font-size: small !important;
+    font-weight: bold !important;
+    color: #666666 !important;
+}
+
+.lblspan
+{
+    font-family: Arial !important;
+    font-size: small !important;
+    font-weight: bold !important;
+    color: #666666 !important;
+}
+
+.lblspan1
+{
+    font-family: Arial !important;
+    font-size: x-large !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+}
+
+.tbl-border
+{
+    border-collapse: collapse;
+}
+.tbl-border tr th
+{
+    background-color: #ea6b38 !important;
+    color: #ffffff !important;
+    border: 1px solid #000000;
+}
+.tbl-border > tr > td
+{
+    border: 1px solid #000000;
+}
+
+.tbl-padding tr td
+{
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.dash-Box
+{
+    height: 110px;
+    width: 220px;
+    border: 1px solid grey;
+    box-shadow: 0px 9px 11px -6px !important;
+    border-radius: 15px;
+}
+
+.sub-dash-box
+{
+    width: 67px;
+    height: 72px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    float: left;
+    margin: 1px;
+}
+.dash-heading
+{
+    display: block;
+    height: 20px;
+    margin-top: 83px;
+    text-align: center;
+}
+
+.sub-dash-box span
+{
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.sub-dash-box a
+{
+    color: #ffffff;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.sub-dash-box a:hover
+{
+    color: #ffffff;
+}

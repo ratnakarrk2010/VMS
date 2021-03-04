@@ -1,0 +1,275 @@
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PASS_MANAGEMENT_SYSTEMModelStoreContainer" CdmEntityContainer="PASS_MANAGEMENT_SYSTEMEntities1">
+    <EntitySetMapping Name="COUNTRY_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.COUNTRY_MASTER">
+        <MappingFragment StoreEntitySet="COUNTRY_MASTER">
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="COUNTRY_ID" ColumnName="COUNTRY_ID" />
+          <ScalarProperty Name="COUNTRY_NAME" ColumnName="COUNTRY_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATE_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.STATE_MASTER">
+        <MappingFragment StoreEntitySet="STATE_MASTER">
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="STATE_NAME" ColumnName="STATE_NAME" />
+          <ScalarProperty Name="STATE_ID" ColumnName="STATE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CANCEL_REASON_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.CANCEL_REASON_MASTER">
+        <MappingFragment StoreEntitySet="CANCEL_REASON_MASTER">
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DESIGNATION_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.DESIGNATION_MASTER">
+        <MappingFragment StoreEntitySet="DESIGNATION_MASTER">
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="DESIGNATION_NAME" ColumnName="DESIGNATION_NAME" />
+          <ScalarProperty Name="DESIGNATION_ID" ColumnName="DESIGNATION_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCUMENT_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.DOCUMENT_MASTER">
+        <MappingFragment StoreEntitySet="DOCUMENT_MASTER">
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="DOCUMENT_NAME" ColumnName="DOCUMENT_NAME" />
+          <ScalarProperty Name="DOCUMENT_ID" ColumnName="DOCUMENT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FIRM_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.FIRM_MASTER">
+        <MappingFragment StoreEntitySet="FIRM_MASTER">
+          <ScalarProperty Name="FIRM_ADDRESS" ColumnName="FIRM_ADDRESS" />
+          <ScalarProperty Name="FIRM_PROPRITER" ColumnName="FIRM_PROPRITER" />
+          <ScalarProperty Name="FIRM_GST" ColumnName="FIRM_GST" />
+          <ScalarProperty Name="FIRM_FILE_NO" ColumnName="FIRM_FILE_NO" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="FIRM_NAME" ColumnName="FIRM_NAME" />
+          <ScalarProperty Name="FIRM_ID" ColumnName="FIRM_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PASSTYPE_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.PASSTYPE_MASTER">
+        <MappingFragment StoreEntitySet="PASSTYPE_MASTER">
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="PASSTYPE_NAME" ColumnName="PASSTYPE_NAME" />
+          <ScalarProperty Name="PASSTYPE_ID" ColumnName="PASSTYPE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHOP_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.SHOP_MASTER">
+        <MappingFragment StoreEntitySet="SHOP_MASTER">
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="SHOP_NAME" ColumnName="SHOP_NAME" />
+          <ScalarProperty Name="SHOP_ID" ColumnName="SHOP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLEMASTERs">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.ROLEMASTER">
+        <MappingFragment StoreEntitySet="ROLEMASTER">
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="ROLENAME" ColumnName="ROLENAME" />
+          <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.USER_MASTER">
+        <MappingFragment StoreEntitySet="USER_MASTER">
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+          <ScalarProperty Name="CREATIONDATE" ColumnName="CREATIONDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="DEPARTMENTNAME" ColumnName="DEPARTMENTNAME" />
+          <ScalarProperty Name="DEPARTMENTID" ColumnName="DEPARTMENTID" />
+          <ScalarProperty Name="APPLICATIONRIGHTS" ColumnName="APPLICATIONRIGHTS" />
+          <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+          <ScalarProperty Name="ISACTIVE" ColumnName="ISACTIVE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ROLETYPEID" ColumnName="ROLETYPEID" />
+          <ScalarProperty Name="EMPTOKEN" ColumnName="EMPTOKEN" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RELIGION_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.RELIGION_MASTER">
+        <MappingFragment StoreEntitySet="RELIGION_MASTER">
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="R_NAME" ColumnName="R_NAME" />
+          <ScalarProperty Name="R_ID" ColumnName="R_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GENDER_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.GENDER_MASTER">
+        <MappingFragment StoreEntitySet="GENDER_MASTER">
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="G_NAME" ColumnName="G_NAME" />
+          <ScalarProperty Name="G_ID" ColumnName="G_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PSU_MASTER">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.PSU_MASTER">
+        <MappingFragment StoreEntitySet="PSU_MASTER">
+          <ScalarProperty Name="PSU_FIRMFILENO" ColumnName="PSU_FIRMFILENO" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="PSU_NAME" ColumnName="PSU_NAME" />
+          <ScalarProperty Name="PSU_ID" ColumnName="PSU_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPLICATION_FORM">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.APPLICATION_FORM">
+        <MappingFragment StoreEntitySet="APPLICATION_FORM">
+          <ScalarProperty Name="APP_DATE" ColumnName="APP_DATE" />
+          <ScalarProperty Name="APP_FORM" ColumnName="APP_FORM" />
+          <ScalarProperty Name="DELETE_FLAG" ColumnName="DELETE_FLAG" />
+          <ScalarProperty Name="CONT_ID" ColumnName="CONT_ID" />
+          <ScalarProperty Name="APP_NUMBER" ColumnName="APP_NUMBER" />
+          <ScalarProperty Name="APP_ID" ColumnName="APP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRACTOR_DETAIL">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.CONTRACTOR_DETAIL">
+        <MappingFragment StoreEntitySet="CONTRACTOR_DETAIL">
+          <ScalarProperty Name="Cont_DocID" ColumnName="Cont_DocID" />
+          <ScalarProperty Name="Cont_UnitEmp" ColumnName="Cont_UnitEmp" />
+          <ScalarProperty Name="Cont_PSUunitID" ColumnName="Cont_PSUunitID" />
+          <ScalarProperty Name="Cont_IcardrNo" ColumnName="Cont_IcardrNo" />
+          <ScalarProperty Name="Cont_BlackList" ColumnName="Cont_BlackList" />
+          <ScalarProperty Name="Cont_CancelDate" ColumnName="Cont_CancelDate" />
+          <ScalarProperty Name="Cont_Fir" ColumnName="Cont_Fir" />
+          <ScalarProperty Name="Cont_Fine" ColumnName="Cont_Fine" />
+          <ScalarProperty Name="Cont_PlaceOfLoss" ColumnName="Cont_PlaceOfLoss" />
+          <ScalarProperty Name="Cont_DateOFLoss" ColumnName="Cont_DateOFLoss" />
+          <ScalarProperty Name="Cont_PassType" ColumnName="Cont_PassType" />
+          <ScalarProperty Name="Cont_CancelReason" ColumnName="Cont_CancelReason" />
+          <ScalarProperty Name="Cont_CancelFLag" ColumnName="Cont_CancelFLag" />
+          <ScalarProperty Name="Cont_CreatedDate" ColumnName="Cont_CreatedDate" />
+          <ScalarProperty Name="Cont_IssueDate" ColumnName="Cont_IssueDate" />
+          <ScalarProperty Name="Cont_District" ColumnName="Cont_District" />
+          <ScalarProperty Name="Cont_Taluka" ColumnName="Cont_Taluka" />
+          <ScalarProperty Name="Cont_Pin" ColumnName="Cont_Pin" />
+          <ScalarProperty Name="Cont_Gender" ColumnName="Cont_Gender" />
+          <ScalarProperty Name="Cont_ReligionID" ColumnName="Cont_ReligionID" />
+          <ScalarProperty Name="Cont_DesignationID" ColumnName="Cont_DesignationID" />
+          <ScalarProperty Name="Cont_Delete_Flag" ColumnName="Cont_Delete_Flag" />
+          <ScalarProperty Name="Cont_CardNo" ColumnName="Cont_CardNo" />
+          <ScalarProperty Name="Cont_FingerPrint" ColumnName="Cont_FingerPrint" />
+          <ScalarProperty Name="Cont_RFIDValidity" ColumnName="Cont_RFIDValidity" />
+          <ScalarProperty Name="Cont_RFIDNo" ColumnName="Cont_RFIDNo" />
+          <ScalarProperty Name="Cont_PVCValidity" ColumnName="Cont_PVCValidity" />
+          <ScalarProperty Name="Cont_PVCNO" ColumnName="Cont_PVCNO" />
+          <ScalarProperty Name="Cont_AppPhoto" ColumnName="Cont_AppPhoto" />
+          <ScalarProperty Name="Cont_AppNo" ColumnName="Cont_AppNo" />
+          <ScalarProperty Name="Cont_NationalityID" ColumnName="Cont_NationalityID" />
+          <ScalarProperty Name="Cont_StateID" ColumnName="Cont_StateID" />
+          <ScalarProperty Name="Cont_PmtAddress" ColumnName="Cont_PmtAddress" />
+          <ScalarProperty Name="Cont_Unit" ColumnName="Cont_Unit" />
+          <ScalarProperty Name="Cont_WOValidity" ColumnName="Cont_WOValidity" />
+          <ScalarProperty Name="Cont_FirmWO" ColumnName="Cont_FirmWO" />
+          <ScalarProperty Name="Cont_FirmID" ColumnName="Cont_FirmID" />
+          <ScalarProperty Name="Cont_FirmFileNo" ColumnName="Cont_FirmFileNo" />
+          <ScalarProperty Name="Cont_Photo" ColumnName="Cont_Photo" />
+          <ScalarProperty Name="Cont_Mobile" ColumnName="Cont_Mobile" />
+          <ScalarProperty Name="Cont_Aadhaar" ColumnName="Cont_Aadhaar" />
+          <ScalarProperty Name="Cont_DOB" ColumnName="Cont_DOB" />
+          <ScalarProperty Name="Cont_Name" ColumnName="Cont_Name" />
+          <ScalarProperty Name="Cont_Id" ColumnName="Cont_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitorTransactionDetails">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.VisitorTransactionDetail">
+        <MappingFragment StoreEntitySet="VisitorTransactionDetail">
+          <ScalarProperty Name="ID_Type" ColumnName="ID_Type" />
+          <ScalarProperty Name="ID_No" ColumnName="ID_No" />
+          <ScalarProperty Name="DL_DATA" ColumnName="DL_DATA" />
+          <ScalarProperty Name="DRIVING_LICENCE" ColumnName="DRIVING_LICENCE" />
+          <ScalarProperty Name="PASSPORT_DATA" ColumnName="PASSPORT_DATA" />
+          <ScalarProperty Name="PASSPORT" ColumnName="PASSPORT" />
+          <ScalarProperty Name="PAN_CARD_DATA" ColumnName="PAN_CARD_DATA" />
+          <ScalarProperty Name="PAN_CARD" ColumnName="PAN_CARD" />
+          <ScalarProperty Name="AADHAR_DATA" ColumnName="AADHAR_DATA" />
+          <ScalarProperty Name="AADHAR_CARD" ColumnName="AADHAR_CARD" />
+          <ScalarProperty Name="OFCR_DEPT" ColumnName="OFCR_DEPT" />
+          <ScalarProperty Name="OFCR_TOKEN" ColumnName="OFCR_TOKEN" />
+          <ScalarProperty Name="DURATION" ColumnName="DURATION" />
+          <ScalarProperty Name="Officer_Designation" ColumnName="Officer_Designation" />
+          <ScalarProperty Name="Officer_Name" ColumnName="Officer_Name" />
+          <ScalarProperty Name="ES_Dept" ColumnName="ES_Dept" />
+          <ScalarProperty Name="ES_CardNo" ColumnName="ES_CardNo" />
+          <ScalarProperty Name="ES_TokenNo" ColumnName="ES_TokenNo" />
+          <ScalarProperty Name="ES_Rank" ColumnName="ES_Rank" />
+          <ScalarProperty Name="ES_Name" ColumnName="ES_Name" />
+          <ScalarProperty Name="V_Purpose" ColumnName="V_Purpose" />
+          <ScalarProperty Name="Firm_Tin_No" ColumnName="Firm_Tin_No" />
+          <ScalarProperty Name="File_Upload" ColumnName="File_Upload" />
+          <ScalarProperty Name="EmpType" ColumnName="EmpType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="PassNumber" ColumnName="PassNumber" />
+          <ScalarProperty Name="numberOfPerson" ColumnName="numberOfPerson" />
+          <ScalarProperty Name="UserCreateDate" ColumnName="UserCreateDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmployeeMobile" ColumnName="EmployeeMobile" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="VisitiorPhoto" ColumnName="VisitiorPhoto" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PassType" ColumnName="PassType" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Oragantization" ColumnName="Oragantization" />
+          <ScalarProperty Name="VehicleNumber" ColumnName="VehicleNumber" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="VisitorName" ColumnName="VisitorName" />
+          <ScalarProperty Name="VisitorTranID" ColumnName="VisitorTranID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CANCEL_LOG">
+      <EntityTypeMapping TypeName="PASS_MANAGEMENT_SYSTEMModel.CANCEL_LOG">
+        <MappingFragment StoreEntitySet="CANCEL_LOG">
+          <ScalarProperty Name="Dockyard_id" ColumnName="Dockyard_id" />
+          <ScalarProperty Name="Loss_Fir" ColumnName="Loss_Fir" />
+          <ScalarProperty Name="Loss_Date" ColumnName="Loss_Date" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Cancel_Fine" ColumnName="Cancel_Fine" />
+          <ScalarProperty Name="Cancel_PlaceLoss" ColumnName="Cancel_PlaceLoss" />
+          <ScalarProperty Name="Cancel_Cr" ColumnName="Cancel_Cr" />
+          <ScalarProperty Name="Cancel_PassNo" ColumnName="Cancel_PassNo" />
+          <ScalarProperty Name="Cancel_Firm" ColumnName="Cancel_Firm" />
+          <ScalarProperty Name="Cancel_Name" ColumnName="Cancel_Name" />
+          <ScalarProperty Name="Cancel_Id" ColumnName="Cancel_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

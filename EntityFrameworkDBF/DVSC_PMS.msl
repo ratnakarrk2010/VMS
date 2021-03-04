@@ -1,0 +1,967 @@
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VMSModelStoreContainer" CdmEntityContainer="VMSEntities">
+    <EntitySetMapping Name="APPLICATION_FORM">
+      <EntityTypeMapping TypeName="VMSModel.APPLICATION_FORM">
+        <MappingFragment StoreEntitySet="APPLICATION_FORM">
+          <ScalarProperty Name="APP_ID" ColumnName="APP_ID" />
+          <ScalarProperty Name="APP_NUMBER" ColumnName="APP_NUMBER" />
+          <ScalarProperty Name="CONT_ID" ColumnName="CONT_ID" />
+          <ScalarProperty Name="DELETE_FLAG" ColumnName="DELETE_FLAG" />
+          <ScalarProperty Name="APP_FORM" ColumnName="APP_FORM" />
+          <ScalarProperty Name="APP_DATE" ColumnName="APP_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CANCEL_LOG">
+      <EntityTypeMapping TypeName="VMSModel.CANCEL_LOG">
+        <MappingFragment StoreEntitySet="CANCEL_LOG">
+          <ScalarProperty Name="Cancel_Id" ColumnName="Cancel_Id" />
+          <ScalarProperty Name="Cancel_Name" ColumnName="Cancel_Name" />
+          <ScalarProperty Name="Cancel_Firm" ColumnName="Cancel_Firm" />
+          <ScalarProperty Name="Cancel_PassNo" ColumnName="Cancel_PassNo" />
+          <ScalarProperty Name="Cancel_Cr" ColumnName="Cancel_Cr" />
+          <ScalarProperty Name="Cancel_PlaceLoss" ColumnName="Cancel_PlaceLoss" />
+          <ScalarProperty Name="Cancel_Fine" ColumnName="Cancel_Fine" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Loss_Date" ColumnName="Loss_Date" />
+          <ScalarProperty Name="Loss_Fir" ColumnName="Loss_Fir" />
+          <ScalarProperty Name="Dockyard_id" ColumnName="Dockyard_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CANCEL_REASON_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.CANCEL_REASON_MASTER">
+        <MappingFragment StoreEntitySet="CANCEL_REASON_MASTER">
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CasualDetails">
+      <EntityTypeMapping TypeName="VMSModel.CasualDetail">
+        <MappingFragment StoreEntitySet="CasualDetail">
+          <ScalarProperty Name="CasualTranId" ColumnName="CasualTranId" />
+          <ScalarProperty Name="CasualName" ColumnName="CasualName" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="RecommendingUnit" ColumnName="RecommendingUnit" />
+          <ScalarProperty Name="WorkSite" ColumnName="WorkSite" />
+          <ScalarProperty Name="NatureOfWork" ColumnName="NatureOfWork" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="DurationOfVisit" ColumnName="DurationOfVisit" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="TNo" ColumnName="TNo" />
+          <ScalarProperty Name="CNo" ColumnName="CNo" />
+          <ScalarProperty Name="CasualPhoto" ColumnName="CasualPhoto" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="ColorOfEye" ColumnName="ColorOfEye" />
+          <ScalarProperty Name="ColorOfHair" ColumnName="ColorOfHair" />
+          <ScalarProperty Name="IdentificationMark" ColumnName="IdentificationMark" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="PTMAddVillage" ColumnName="PTMAddVillage" />
+          <ScalarProperty Name="PMTAddPO" ColumnName="PMTAddPO" />
+          <ScalarProperty Name="PMTAddTaluke" ColumnName="PMTAddTaluke" />
+          <ScalarProperty Name="PMTAddPoliceStn" ColumnName="PMTAddPoliceStn" />
+          <ScalarProperty Name="PMTAddDist" ColumnName="PMTAddDist" />
+          <ScalarProperty Name="PMTAddState" ColumnName="PMTAddState" />
+          <ScalarProperty Name="PMTAddPin" ColumnName="PMTAddPin" />
+          <ScalarProperty Name="PMTAddTel" ColumnName="PMTAddTel" />
+          <ScalarProperty Name="PRAddVillage" ColumnName="PRAddVillage" />
+          <ScalarProperty Name="PRAddPO" ColumnName="PRAddPO" />
+          <ScalarProperty Name="PRAddTaluka" ColumnName="PRAddTaluka" />
+          <ScalarProperty Name="PRAddPoliceStn" ColumnName="PRAddPoliceStn" />
+          <ScalarProperty Name="PRAddDist" ColumnName="PRAddDist" />
+          <ScalarProperty Name="PRAddState" ColumnName="PRAddState" />
+          <ScalarProperty Name="PRAddPin" ColumnName="PRAddPin" />
+          <ScalarProperty Name="PRAddTel" ColumnName="PRAddTel" />
+          <ScalarProperty Name="RecordOfMisconduct" ColumnName="RecordOfMisconduct" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserCreateDate" ColumnName="UserCreateDate" />
+          <ScalarProperty Name="UIDNo" ColumnName="UIDNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conf_Detail">
+      <EntityTypeMapping TypeName="VMSModel.Conf_Detail">
+        <MappingFragment StoreEntitySet="Conf_Detail">
+          <ScalarProperty Name="Conf_ID" ColumnName="Conf_ID" />
+          <ScalarProperty Name="Conf_Dept" ColumnName="Conf_Dept" />
+          <ScalarProperty Name="Conf_Center" ColumnName="Conf_Center" />
+          <ScalarProperty Name="Conf_Purpose" ColumnName="Conf_Purpose" />
+          <ScalarProperty Name="Conf_Firm" ColumnName="Conf_Firm" />
+          <ScalarProperty Name="Conf_TypeID" ColumnName="Conf_TypeID" />
+          <ScalarProperty Name="Conf_DateID" ColumnName="Conf_DateID" />
+          <ScalarProperty Name="Conf_CreatedDate" ColumnName="Conf_CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatebBy" ColumnName="CreatebBy" />
+          <ScalarProperty Name="Conf_StartTime" ColumnName="Conf_StartTime" />
+          <ScalarProperty Name="Conf_EndTime" ColumnName="Conf_EndTime" />
+          <ScalarProperty Name="Conf_Hall" ColumnName="Conf_Hall" />
+          <ScalarProperty Name="Booking_Status" ColumnName="Booking_Status" />
+          <ScalarProperty Name="Conf_Sys_Date" ColumnName="Conf_Sys_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conf_Detail_Audit">
+      <EntityTypeMapping TypeName="VMSModel.Conf_Detail_Audit">
+        <MappingFragment StoreEntitySet="Conf_Detail_Audit">
+          <ScalarProperty Name="Audit_ID" ColumnName="Audit_ID" />
+          <ScalarProperty Name="Conf_ID" ColumnName="Conf_ID" />
+          <ScalarProperty Name="Conf_Dept" ColumnName="Conf_Dept" />
+          <ScalarProperty Name="Conf_Center" ColumnName="Conf_Center" />
+          <ScalarProperty Name="Conf_Purpose" ColumnName="Conf_Purpose" />
+          <ScalarProperty Name="Conf_Firm" ColumnName="Conf_Firm" />
+          <ScalarProperty Name="Conf_TypeID" ColumnName="Conf_TypeID" />
+          <ScalarProperty Name="Conf_DateID" ColumnName="Conf_DateID" />
+          <ScalarProperty Name="Conf_CreatedDate" ColumnName="Conf_CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatebBy" ColumnName="CreatebBy" />
+          <ScalarProperty Name="Conf_StartTime" ColumnName="Conf_StartTime" />
+          <ScalarProperty Name="Conf_EndTime" ColumnName="Conf_EndTime" />
+          <ScalarProperty Name="Conf_Hall" ColumnName="Conf_Hall" />
+          <ScalarProperty Name="Booking_Status" ColumnName="Booking_Status" />
+          <ScalarProperty Name="Action_Name" ColumnName="Action_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conf_ScheduleDate">
+      <EntityTypeMapping TypeName="VMSModel.Conf_ScheduleDate">
+        <MappingFragment StoreEntitySet="Conf_ScheduleDate">
+          <ScalarProperty Name="Conf_DateID" ColumnName="Conf_DateID" />
+          <ScalarProperty Name="Conf_Date" ColumnName="Conf_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conf_ScheduleTime">
+      <EntityTypeMapping TypeName="VMSModel.Conf_ScheduleTime">
+        <MappingFragment StoreEntitySet="Conf_ScheduleTime">
+          <ScalarProperty Name="Conf_TimeID" ColumnName="Conf_TimeID" />
+          <ScalarProperty Name="Conf_TypeID" ColumnName="Conf_TypeID" />
+          <ScalarProperty Name="Conf_StartTime" ColumnName="Conf_StartTime" />
+          <ScalarProperty Name="Conf_EndTime" ColumnName="Conf_EndTime" />
+          <ScalarProperty Name="ConDetails" ColumnName="ConDetails" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conf_Time">
+      <EntityTypeMapping TypeName="VMSModel.Conf_Time">
+        <MappingFragment StoreEntitySet="Conf_Time">
+          <ScalarProperty Name="Conf_TimeID" ColumnName="Conf_TimeID" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conf_Type">
+      <EntityTypeMapping TypeName="VMSModel.Conf_Type">
+        <MappingFragment StoreEntitySet="Conf_Type">
+          <ScalarProperty Name="Conf_TypeID" ColumnName="Conf_TypeID" />
+          <ScalarProperty Name="Conf_Name" ColumnName="Conf_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRACTOR_DETAIL">
+      <EntityTypeMapping TypeName="VMSModel.CONTRACTOR_DETAIL">
+        <MappingFragment StoreEntitySet="CONTRACTOR_DETAIL">
+          <ScalarProperty Name="Cont_ShopId" ColumnName="Cont_ShopId" />
+          <ScalarProperty Name="Cont_Id" ColumnName="Cont_Id" />
+          <ScalarProperty Name="Cont_Name" ColumnName="Cont_Name" />
+          <ScalarProperty Name="Cont_DOB" ColumnName="Cont_DOB" />
+          <ScalarProperty Name="Cont_Aadhaar" ColumnName="Cont_Aadhaar" />
+          <ScalarProperty Name="Cont_Mobile" ColumnName="Cont_Mobile" />
+          <ScalarProperty Name="Cont_Photo" ColumnName="Cont_Photo" />
+          <ScalarProperty Name="Cont_FirmFileNo" ColumnName="Cont_FirmFileNo" />
+          <ScalarProperty Name="Cont_FirmID" ColumnName="Cont_FirmID" />
+          <ScalarProperty Name="Cont_FirmWO" ColumnName="Cont_FirmWO" />
+          <ScalarProperty Name="Cont_WOValidity" ColumnName="Cont_WOValidity" />
+          <ScalarProperty Name="Cont_Unit" ColumnName="Cont_Unit" />
+          <ScalarProperty Name="Cont_PmtAddress" ColumnName="Cont_PmtAddress" />
+          <ScalarProperty Name="Cont_StateID" ColumnName="Cont_StateID" />
+          <ScalarProperty Name="Cont_NationalityID" ColumnName="Cont_NationalityID" />
+          <ScalarProperty Name="Cont_AppNo" ColumnName="Cont_AppNo" />
+          <ScalarProperty Name="Cont_AppPhoto" ColumnName="Cont_AppPhoto" />
+          <ScalarProperty Name="Cont_PVCNO" ColumnName="Cont_PVCNO" />
+          <ScalarProperty Name="Cont_PVCValidity" ColumnName="Cont_PVCValidity" />
+          <ScalarProperty Name="Cont_RFIDNo" ColumnName="Cont_RFIDNo" />
+          <ScalarProperty Name="Cont_RFIDValidity" ColumnName="Cont_RFIDValidity" />
+          <ScalarProperty Name="Cont_FingerPrint" ColumnName="Cont_FingerPrint" />
+          <ScalarProperty Name="Cont_CardNo" ColumnName="Cont_CardNo" />
+          <ScalarProperty Name="Cont_Delete_Flag" ColumnName="Cont_Delete_Flag" />
+          <ScalarProperty Name="Cont_DesignationID" ColumnName="Cont_DesignationID" />
+          <ScalarProperty Name="Cont_ReligionID" ColumnName="Cont_ReligionID" />
+          <ScalarProperty Name="Cont_Gender" ColumnName="Cont_Gender" />
+          <ScalarProperty Name="Cont_Pin" ColumnName="Cont_Pin" />
+          <ScalarProperty Name="Cont_Taluka" ColumnName="Cont_Taluka" />
+          <ScalarProperty Name="Cont_District" ColumnName="Cont_District" />
+          <ScalarProperty Name="Cont_IssueDate" ColumnName="Cont_IssueDate" />
+          <ScalarProperty Name="Cont_CreatedDate" ColumnName="Cont_CreatedDate" />
+          <ScalarProperty Name="Cont_CancelFLag" ColumnName="Cont_CancelFLag" />
+          <ScalarProperty Name="Cont_CancelReason" ColumnName="Cont_CancelReason" />
+          <ScalarProperty Name="Cont_PassType" ColumnName="Cont_PassType" />
+          <ScalarProperty Name="Cont_DateOFLoss" ColumnName="Cont_DateOFLoss" />
+          <ScalarProperty Name="Cont_PlaceOfLoss" ColumnName="Cont_PlaceOfLoss" />
+          <ScalarProperty Name="Cont_Fine" ColumnName="Cont_Fine" />
+          <ScalarProperty Name="Cont_Fir" ColumnName="Cont_Fir" />
+          <ScalarProperty Name="Cont_CancelDate" ColumnName="Cont_CancelDate" />
+          <ScalarProperty Name="Cont_BlackList" ColumnName="Cont_BlackList" />
+          <ScalarProperty Name="Cont_IcardrNo" ColumnName="Cont_IcardrNo" />
+          <ScalarProperty Name="Cont_PSUunitID" ColumnName="Cont_PSUunitID" />
+          <ScalarProperty Name="Cont_UnitEmp" ColumnName="Cont_UnitEmp" />
+          <ScalarProperty Name="Cont_DocID" ColumnName="Cont_DocID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractorDetails">
+      <EntityTypeMapping TypeName="VMSModel.ContractorDetail">
+        <MappingFragment StoreEntitySet="ContractorDetail">
+          <ScalarProperty Name="ContractorTranId" ColumnName="ContractorTranId" />
+          <ScalarProperty Name="ContractorName" ColumnName="ContractorName" />
+          <ScalarProperty Name="ContractorFirm" ColumnName="ContractorFirm" />
+          <ScalarProperty Name="ContractorCardNo" ColumnName="ContractorCardNo" />
+          <ScalarProperty Name="ContractorPhoto" ColumnName="ContractorPhoto" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="IdentificationMark" ColumnName="IdentificationMark" />
+          <ScalarProperty Name="ColorOfEye" ColumnName="ColorOfEye" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ColorOfHair" ColumnName="ColorOfHair" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+          <ScalarProperty Name="NOK" ColumnName="NOK" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="PVCDate" ColumnName="PVCDate" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="EscortType" ColumnName="EscortType" />
+          <ScalarProperty Name="DateOfExpire" ColumnName="DateOfExpire" />
+          <ScalarProperty Name="PTMAddVillage" ColumnName="PTMAddVillage" />
+          <ScalarProperty Name="PMTAddPO" ColumnName="PMTAddPO" />
+          <ScalarProperty Name="PMTAddTaluke" ColumnName="PMTAddTaluke" />
+          <ScalarProperty Name="PMTAddPoliceStn" ColumnName="PMTAddPoliceStn" />
+          <ScalarProperty Name="PMTAddDist" ColumnName="PMTAddDist" />
+          <ScalarProperty Name="PMTAddState" ColumnName="PMTAddState" />
+          <ScalarProperty Name="PMTAddPin" ColumnName="PMTAddPin" />
+          <ScalarProperty Name="PMTAddTel" ColumnName="PMTAddTel" />
+          <ScalarProperty Name="PRAddVillage" ColumnName="PRAddVillage" />
+          <ScalarProperty Name="PRAddPO" ColumnName="PRAddPO" />
+          <ScalarProperty Name="PRAddTaluka" ColumnName="PRAddTaluka" />
+          <ScalarProperty Name="PRAddPoliceStn" ColumnName="PRAddPoliceStn" />
+          <ScalarProperty Name="PRAddDist" ColumnName="PRAddDist" />
+          <ScalarProperty Name="PRAddState" ColumnName="PRAddState" />
+          <ScalarProperty Name="PRAddPin" ColumnName="PRAddPin" />
+          <ScalarProperty Name="PRAddTel" ColumnName="PRAddTel" />
+          <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+          <ScalarProperty Name="FirmAddress" ColumnName="FirmAddress" />
+          <ScalarProperty Name="FirmProprietor" ColumnName="FirmProprietor" />
+          <ScalarProperty Name="FirmValidity" ColumnName="FirmValidity" />
+          <ScalarProperty Name="FirmWorkOrderNo" ColumnName="FirmWorkOrderNo" />
+          <ScalarProperty Name="FirmWorkSite" ColumnName="FirmWorkSite" />
+          <ScalarProperty Name="FirmSponsor" ColumnName="FirmSponsor" />
+          <ScalarProperty Name="FirmRegNo" ColumnName="FirmRegNo" />
+          <ScalarProperty Name="FirmNatureOfWork" ColumnName="FirmNatureOfWork" />
+          <ScalarProperty Name="RecordOfMisconduct" ColumnName="RecordOfMisconduct" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserCreateDate" ColumnName="UserCreateDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+          <ScalarProperty Name="oldrecord" ColumnName="oldrecord" />
+          <ScalarProperty Name="RecommandedBy" ColumnName="RecommandedBy" />
+          <ScalarProperty Name="UIDNO" ColumnName="UIDNO" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="FirmID" ColumnName="FirmID" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractorIDDetails">
+      <EntityTypeMapping TypeName="VMSModel.ContractorIDDetail">
+        <MappingFragment StoreEntitySet="ContractorIDDetail">
+          <ScalarProperty Name="ContractorTranId" ColumnName="ContractorTranId" />
+          <ScalarProperty Name="ContractorName" ColumnName="ContractorName" />
+          <ScalarProperty Name="ContractorFirm" ColumnName="ContractorFirm" />
+          <ScalarProperty Name="ContractorCardNo" ColumnName="ContractorCardNo" />
+          <ScalarProperty Name="ContractorPhoto" ColumnName="ContractorPhoto" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="IdentificationMark" ColumnName="IdentificationMark" />
+          <ScalarProperty Name="ColorOfEye" ColumnName="ColorOfEye" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ColorOfHair" ColumnName="ColorOfHair" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+          <ScalarProperty Name="NOK" ColumnName="NOK" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="PVCDate" ColumnName="PVCDate" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="EscortType" ColumnName="EscortType" />
+          <ScalarProperty Name="DateOfExpire" ColumnName="DateOfExpire" />
+          <ScalarProperty Name="PTMAddVillage" ColumnName="PTMAddVillage" />
+          <ScalarProperty Name="PMTAddPO" ColumnName="PMTAddPO" />
+          <ScalarProperty Name="PMTAddTaluke" ColumnName="PMTAddTaluke" />
+          <ScalarProperty Name="PMTAddPoliceStn" ColumnName="PMTAddPoliceStn" />
+          <ScalarProperty Name="PMTAddDist" ColumnName="PMTAddDist" />
+          <ScalarProperty Name="PMTAddState" ColumnName="PMTAddState" />
+          <ScalarProperty Name="PMTAddPin" ColumnName="PMTAddPin" />
+          <ScalarProperty Name="PMTAddTel" ColumnName="PMTAddTel" />
+          <ScalarProperty Name="PRAddVillage" ColumnName="PRAddVillage" />
+          <ScalarProperty Name="PRAddPO" ColumnName="PRAddPO" />
+          <ScalarProperty Name="PRAddTaluka" ColumnName="PRAddTaluka" />
+          <ScalarProperty Name="PRAddPoliceStn" ColumnName="PRAddPoliceStn" />
+          <ScalarProperty Name="PRAddDist" ColumnName="PRAddDist" />
+          <ScalarProperty Name="PRAddState" ColumnName="PRAddState" />
+          <ScalarProperty Name="PRAddPin" ColumnName="PRAddPin" />
+          <ScalarProperty Name="PRAddTel" ColumnName="PRAddTel" />
+          <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+          <ScalarProperty Name="FirmAddress" ColumnName="FirmAddress" />
+          <ScalarProperty Name="FirmProprietor" ColumnName="FirmProprietor" />
+          <ScalarProperty Name="FirmValidity" ColumnName="FirmValidity" />
+          <ScalarProperty Name="FirmWorkOrderNo" ColumnName="FirmWorkOrderNo" />
+          <ScalarProperty Name="FirmWorkSite" ColumnName="FirmWorkSite" />
+          <ScalarProperty Name="FirmSponsor" ColumnName="FirmSponsor" />
+          <ScalarProperty Name="FirmRegNo" ColumnName="FirmRegNo" />
+          <ScalarProperty Name="FirmNatureOfWork" ColumnName="FirmNatureOfWork" />
+          <ScalarProperty Name="RecordOfMisconduct" ColumnName="RecordOfMisconduct" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserCreateDate" ColumnName="UserCreateDate" />
+          <ScalarProperty Name="RecommandedBy" ColumnName="RecommandedBy" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+          <ScalarProperty Name="UIDNo" ColumnName="UIDNo" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="FirmID" ColumnName="FirmID" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Center_No" ColumnName="Center_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COUNTRY_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.COUNTRY_MASTER">
+        <MappingFragment StoreEntitySet="COUNTRY_MASTER">
+          <ScalarProperty Name="COUNTRY_ID" ColumnName="COUNTRY_ID" />
+          <ScalarProperty Name="COUNTRY_NAME" ColumnName="COUNTRY_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountryMasters">
+      <EntityTypeMapping TypeName="VMSModel.CountryMaster">
+        <MappingFragment StoreEntitySet="CountryMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Country_Name" ColumnName="Country_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepartmentMasters">
+      <EntityTypeMapping TypeName="VMSModel.DepartmentMaster">
+        <MappingFragment StoreEntitySet="DepartmentMaster">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DESIGNATION_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.DESIGNATION_MASTER">
+        <MappingFragment StoreEntitySet="DESIGNATION_MASTER">
+          <ScalarProperty Name="DESIGNATION_ID" ColumnName="DESIGNATION_ID" />
+          <ScalarProperty Name="DESIGNATION_NAME" ColumnName="DESIGNATION_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCUMENT_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.DOCUMENT_MASTER">
+        <MappingFragment StoreEntitySet="DOCUMENT_MASTER">
+          <ScalarProperty Name="DOCUMENT_ID" ColumnName="DOCUMENT_ID" />
+          <ScalarProperty Name="DOCUMENT_NAME" ColumnName="DOCUMENT_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EscortMasters">
+      <EntityTypeMapping TypeName="VMSModel.EscortMaster">
+        <MappingFragment StoreEntitySet="EscortMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ES_Name" ColumnName="ES_Name" />
+          <ScalarProperty Name="ES_Rank" ColumnName="ES_Rank" />
+          <ScalarProperty Name="ES_TokenNo" ColumnName="ES_TokenNo" />
+          <ScalarProperty Name="ES_Dept" ColumnName="ES_Dept" />
+          <ScalarProperty Name="Officer_Name" ColumnName="Officer_Name" />
+          <ScalarProperty Name="Officer_Designation" ColumnName="Officer_Designation" />
+          <ScalarProperty Name="Officer_Token" ColumnName="Officer_Token" />
+          <ScalarProperty Name="ES_MobNumber" ColumnName="ES_MobNumber" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Files">
+      <EntityTypeMapping TypeName="VMSModel.File">
+        <MappingFragment StoreEntitySet="Files">
+          <ScalarProperty Name="Sr_No" ColumnName="Sr_No" />
+          <ScalarProperty Name="File_Name" ColumnName="File_Name" />
+          <ScalarProperty Name="File_Type" ColumnName="File_Type" />
+          <ScalarProperty Name="File_Data" ColumnName="File_Data" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Firm_Master">
+      <EntityTypeMapping TypeName="VMSModel.Firm_Master">
+        <MappingFragment StoreEntitySet="Firm_Master">
+          <ScalarProperty Name="Firm_ID" ColumnName="Firm_ID" />
+          <ScalarProperty Name="Firm_Name" ColumnName="Firm_Name" />
+          <ScalarProperty Name="Proprietor_Name" ColumnName="Proprietor_Name" />
+          <ScalarProperty Name="Registered_Date" ColumnName="Registered_Date" />
+          <ScalarProperty Name="Firm_Address" ColumnName="Firm_Address" />
+          <ScalarProperty Name="Firm_Tin" ColumnName="Firm_Tin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FIRMMASTERs">
+      <EntityTypeMapping TypeName="VMSModel.FIRMMASTER">
+        <MappingFragment StoreEntitySet="FIRMMASTER">
+          <ScalarProperty Name="FIRM_ID" ColumnName="FIRM_ID" />
+          <ScalarProperty Name="FIRM_NAME" ColumnName="FIRM_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="FIRM_FILE_NO" ColumnName="FIRM_FILE_NO" />
+          <ScalarProperty Name="FIRM_GST" ColumnName="FIRM_GST" />
+          <ScalarProperty Name="FIRM_PROPRITER" ColumnName="FIRM_PROPRITER" />
+          <ScalarProperty Name="FIRM_ADDRESS" ColumnName="FIRM_ADDRESS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gadget_Details">
+      <EntityTypeMapping TypeName="VMSModel.Gadget_Details">
+        <MappingFragment StoreEntitySet="Gadget_Details">
+          <ScalarProperty Name="Sr_No" ColumnName="Sr_No" />
+          <ScalarProperty Name="VisitorName" ColumnName="VisitorName" />
+          <ScalarProperty Name="VisitorID" ColumnName="VisitorID" />
+          <ScalarProperty Name="GadgetName" ColumnName="GadgetName" />
+          <ScalarProperty Name="Gadget_SerialNo" ColumnName="Gadget_SerialNo" />
+          <ScalarProperty Name="Contact_No" ColumnName="Contact_No" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="From_Time" ColumnName="From_Time" />
+          <ScalarProperty Name="To_Time" ColumnName="To_Time" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Unit_Address" ColumnName="Unit_Address" />
+          <ScalarProperty Name="Tele_Ext" ColumnName="Tele_Ext" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+          <ScalarProperty Name="Ofcr_Tran_Id" ColumnName="Ofcr_Tran_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GENDER_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.GENDER_MASTER">
+        <MappingFragment StoreEntitySet="GENDER_MASTER">
+          <ScalarProperty Name="G_ID" ColumnName="G_ID" />
+          <ScalarProperty Name="G_NAME" ColumnName="G_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HostMasters">
+      <EntityTypeMapping TypeName="VMSModel.HostMaster">
+        <MappingFragment StoreEntitySet="HostMaster">
+          <ScalarProperty Name="HostId" ColumnName="HostId" />
+          <ScalarProperty Name="HostName" ColumnName="HostName" />
+          <ScalarProperty Name="Hostphoto" ColumnName="Hostphoto" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="HostCode" ColumnName="HostCode" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LabourTransactions">
+      <EntityTypeMapping TypeName="VMSModel.LabourTransaction">
+        <MappingFragment StoreEntitySet="LabourTransaction">
+          <ScalarProperty Name="ContractorTranId" ColumnName="ContractorTranId" />
+          <ScalarProperty Name="ContractorName" ColumnName="ContractorName" />
+          <ScalarProperty Name="ContractorFirm" ColumnName="ContractorFirm" />
+          <ScalarProperty Name="ContractorCardNo" ColumnName="ContractorCardNo" />
+          <ScalarProperty Name="ContractorPhoto" ColumnName="ContractorPhoto" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="IdentificationMark" ColumnName="IdentificationMark" />
+          <ScalarProperty Name="ColorOfEye" ColumnName="ColorOfEye" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ColorOfHair" ColumnName="ColorOfHair" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+          <ScalarProperty Name="NOK" ColumnName="NOK" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="PVCDate" ColumnName="PVCDate" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="EscortType" ColumnName="EscortType" />
+          <ScalarProperty Name="DateOfExpire" ColumnName="DateOfExpire" />
+          <ScalarProperty Name="PTMAddVillage" ColumnName="PTMAddVillage" />
+          <ScalarProperty Name="PMTAddPO" ColumnName="PMTAddPO" />
+          <ScalarProperty Name="PMTAddTaluke" ColumnName="PMTAddTaluke" />
+          <ScalarProperty Name="PMTAddPoliceStn" ColumnName="PMTAddPoliceStn" />
+          <ScalarProperty Name="PMTAddDist" ColumnName="PMTAddDist" />
+          <ScalarProperty Name="PMTAddState" ColumnName="PMTAddState" />
+          <ScalarProperty Name="PMTAddPin" ColumnName="PMTAddPin" />
+          <ScalarProperty Name="PMTAddTel" ColumnName="PMTAddTel" />
+          <ScalarProperty Name="PRAddVillage" ColumnName="PRAddVillage" />
+          <ScalarProperty Name="PRAddPO" ColumnName="PRAddPO" />
+          <ScalarProperty Name="PRAddTaluka" ColumnName="PRAddTaluka" />
+          <ScalarProperty Name="PRAddPoliceStn" ColumnName="PRAddPoliceStn" />
+          <ScalarProperty Name="PRAddDist" ColumnName="PRAddDist" />
+          <ScalarProperty Name="PRAddState" ColumnName="PRAddState" />
+          <ScalarProperty Name="PRAddPin" ColumnName="PRAddPin" />
+          <ScalarProperty Name="PRAddTel" ColumnName="PRAddTel" />
+          <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+          <ScalarProperty Name="FirmAddress" ColumnName="FirmAddress" />
+          <ScalarProperty Name="FirmProprietor" ColumnName="FirmProprietor" />
+          <ScalarProperty Name="FirmValidity" ColumnName="FirmValidity" />
+          <ScalarProperty Name="FirmWorkOrderNo" ColumnName="FirmWorkOrderNo" />
+          <ScalarProperty Name="FirmWorkSite" ColumnName="FirmWorkSite" />
+          <ScalarProperty Name="FirmSponsor" ColumnName="FirmSponsor" />
+          <ScalarProperty Name="FirmRegNo" ColumnName="FirmRegNo" />
+          <ScalarProperty Name="FirmNatureOfWork" ColumnName="FirmNatureOfWork" />
+          <ScalarProperty Name="RecordOfMisconduct" ColumnName="RecordOfMisconduct" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserCreateDate" ColumnName="UserCreateDate" />
+          <ScalarProperty Name="RecommandedBy" ColumnName="RecommandedBy" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+          <ScalarProperty Name="UIDNo" ColumnName="UIDNo" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="FirmID" ColumnName="FirmID" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Center_No" ColumnName="Center_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Officer_Transaction">
+      <EntityTypeMapping TypeName="VMSModel.Officer_Transaction">
+        <MappingFragment StoreEntitySet="Officer_Transaction">
+          <ScalarProperty Name="Ofcr_Tran_Id" ColumnName="Ofcr_Tran_Id" />
+          <ScalarProperty Name="V_name" ColumnName="V_name" />
+          <ScalarProperty Name="V_PassNo" ColumnName="V_PassNo" />
+          <ScalarProperty Name="V_Age" ColumnName="V_Age" />
+          <ScalarProperty Name="V_Sex" ColumnName="V_Sex" />
+          <ScalarProperty Name="V_ContactNo" ColumnName="V_ContactNo" />
+          <ScalarProperty Name="V_Nationality" ColumnName="V_Nationality" />
+          <ScalarProperty Name="V_Firm" ColumnName="V_Firm" />
+          <ScalarProperty Name="V_FromTime" ColumnName="V_FromTime" />
+          <ScalarProperty Name="V_ToTime" ColumnName="V_ToTime" />
+          <ScalarProperty Name="V_Purpose" ColumnName="V_Purpose" />
+          <ScalarProperty Name="V_Date" ColumnName="V_Date" />
+          <ScalarProperty Name="ES_Name" ColumnName="ES_Name" />
+          <ScalarProperty Name="ES_Rank" ColumnName="ES_Rank" />
+          <ScalarProperty Name="ES_TokenNo" ColumnName="ES_TokenNo" />
+          <ScalarProperty Name="ES_CardNo" ColumnName="ES_CardNo" />
+          <ScalarProperty Name="ES_Dept" ColumnName="ES_Dept" />
+          <ScalarProperty Name="Center_No" ColumnName="Center_No" />
+          <ScalarProperty Name="Officer_Name" ColumnName="Officer_Name" />
+          <ScalarProperty Name="Officer_Designation" ColumnName="Officer_Designation" />
+          <ScalarProperty Name="V_Status" ColumnName="V_Status" />
+          <ScalarProperty Name="V_Dept" ColumnName="V_Dept" />
+          <ScalarProperty Name="Approved_By" ColumnName="Approved_By" />
+          <ScalarProperty Name="Emp_Type" ColumnName="Emp_Type" />
+          <ScalarProperty Name="Recommand_By" ColumnName="Recommand_By" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="V_ID_TYPE" ColumnName="V_ID_TYPE" />
+          <ScalarProperty Name="V_ID_NO" ColumnName="V_ID_NO" />
+          <ScalarProperty Name="Print_status" ColumnName="Print_status" />
+          <ScalarProperty Name="V_FIRM_TIN" ColumnName="V_FIRM_TIN" />
+          <ScalarProperty Name="DURATION" ColumnName="DURATION" />
+          <ScalarProperty Name="OFCR_TOKEN" ColumnName="OFCR_TOKEN" />
+          <ScalarProperty Name="OFCR_DEPT" ColumnName="OFCR_DEPT" />
+          <ScalarProperty Name="Print_Date" ColumnName="Print_Date" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+          <ScalarProperty Name="ES_MobNumber" ColumnName="ES_MobNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OfficerMasters">
+      <EntityTypeMapping TypeName="VMSModel.OfficerMaster">
+        <MappingFragment StoreEntitySet="OfficerMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Officer_Token" ColumnName="Officer_Token" />
+          <ScalarProperty Name="Officer_Name" ColumnName="Officer_Name" />
+          <ScalarProperty Name="Officer_Designation" ColumnName="Officer_Designation" />
+          <ScalarProperty Name="Officer_Dept" ColumnName="Officer_Dept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PASSTYPE_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.PASSTYPE_MASTER">
+        <MappingFragment StoreEntitySet="PASSTYPE_MASTER">
+          <ScalarProperty Name="PASSTYPE_ID" ColumnName="PASSTYPE_ID" />
+          <ScalarProperty Name="PASSTYPE_NAME" ColumnName="PASSTYPE_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PSU_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.PSU_MASTER">
+        <MappingFragment StoreEntitySet="PSU_MASTER">
+          <ScalarProperty Name="PSU_ID" ColumnName="PSU_ID" />
+          <ScalarProperty Name="PSU_NAME" ColumnName="PSU_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="PSU_FIRMFILENO" ColumnName="PSU_FIRMFILENO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RELIGION_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.RELIGION_MASTER">
+        <MappingFragment StoreEntitySet="RELIGION_MASTER">
+          <ScalarProperty Name="R_ID" ColumnName="R_ID" />
+          <ScalarProperty Name="R_NAME" ColumnName="R_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="role_master">
+      <EntityTypeMapping TypeName="VMSModel.role_master">
+        <MappingFragment StoreEntitySet="role_master">
+          <ScalarProperty Name="roletypeid" ColumnName="roletypeid" />
+          <ScalarProperty Name="rolename" ColumnName="rolename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLEMASTERs">
+      <EntityTypeMapping TypeName="VMSModel.ROLEMASTER">
+        <MappingFragment StoreEntitySet="ROLEMASTER">
+          <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+          <ScalarProperty Name="ROLENAME" ColumnName="ROLENAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHOP_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.SHOP_MASTER">
+        <MappingFragment StoreEntitySet="SHOP_MASTER">
+          <ScalarProperty Name="SHOP_ID" ColumnName="SHOP_ID" />
+          <ScalarProperty Name="SHOP_NAME" ColumnName="SHOP_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="FILENO" ColumnName="FILENO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATE_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.STATE_MASTER">
+        <MappingFragment StoreEntitySet="STATE_MASTER">
+          <ScalarProperty Name="STATE_ID" ColumnName="STATE_ID" />
+          <ScalarProperty Name="STATE_NAME" ColumnName="STATE_NAME" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEMP_GV">
+      <EntityTypeMapping TypeName="VMSModel.TEMP_GV">
+        <MappingFragment StoreEntitySet="TEMP_GV">
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+          <ScalarProperty Name="PURPOSE" ColumnName="PURPOSE" />
+          <ScalarProperty Name="TEMP_V_ID" ColumnName="TEMP_V_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempCasualVisitors">
+      <EntityTypeMapping TypeName="VMSModel.TempCasualVisitor">
+        <MappingFragment StoreEntitySet="TempCasualVisitor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Passno" ColumnName="Passno" />
+          <ScalarProperty Name="Vname" ColumnName="Vname" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+          <ScalarProperty Name="EMP_Type" ColumnName="EMP_Type" />
+          <ScalarProperty Name="ID_TYPE" ColumnName="ID_TYPE" />
+          <ScalarProperty Name="ID_NUMBER" ColumnName="ID_NUMBER" />
+          <ScalarProperty Name="V_FIRM_TIN" ColumnName="V_FIRM_TIN" />
+          <ScalarProperty Name="DURATION" ColumnName="DURATION" />
+          <ScalarProperty Name="VechicleDetail" ColumnName="VechicleDetail" />
+          <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="Vehicle_Purpose" ColumnName="Vehicle_Purpose" />
+          <ScalarProperty Name="Vehicle_Remarks" ColumnName="Vehicle_Remarks" />
+          <ScalarProperty Name="GadgetDetail" ColumnName="GadgetDetail" />
+          <ScalarProperty Name="GadgetName" ColumnName="GadgetName" />
+          <ScalarProperty Name="Gadget_SerialNo" ColumnName="Gadget_SerialNo" />
+          <ScalarProperty Name="Gadget_Purpose" ColumnName="Gadget_Purpose" />
+          <ScalarProperty Name="Gadget_Remarks" ColumnName="Gadget_Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempLabourLists">
+      <EntityTypeMapping TypeName="VMSModel.TempLabourList">
+        <MappingFragment StoreEntitySet="TempLabourList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Pass_no" ColumnName="Pass_no" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+          <ScalarProperty Name="LabouRequaired" ColumnName="LabouRequaired" />
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemporaryDetails">
+      <EntityTypeMapping TypeName="VMSModel.TemporaryDetail">
+        <MappingFragment StoreEntitySet="TemporaryDetail">
+          <ScalarProperty Name="TemporaryTranId" ColumnName="TemporaryTranId" />
+          <ScalarProperty Name="TemporaryName" ColumnName="TemporaryName" />
+          <ScalarProperty Name="TNo" ColumnName="TNo" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="TemporaryPhoto" ColumnName="TemporaryPhoto" />
+          <ScalarProperty Name="CNo" ColumnName="CNo" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="AppointmentNo" ColumnName="AppointmentNo" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="ColorOfEye" ColumnName="ColorOfEye" />
+          <ScalarProperty Name="ColorOfHair" ColumnName="ColorOfHair" />
+          <ScalarProperty Name="EscortType" ColumnName="EscortType" />
+          <ScalarProperty Name="IdentificationMark" ColumnName="IdentificationMark" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+          <ScalarProperty Name="PVCDate" ColumnName="PVCDate" />
+          <ScalarProperty Name="NOK" ColumnName="NOK" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="PTMAddVillage" ColumnName="PTMAddVillage" />
+          <ScalarProperty Name="PMTAddPO" ColumnName="PMTAddPO" />
+          <ScalarProperty Name="PMTAddTaluke" ColumnName="PMTAddTaluke" />
+          <ScalarProperty Name="PMTAddPoliceStn" ColumnName="PMTAddPoliceStn" />
+          <ScalarProperty Name="PMTAddDist" ColumnName="PMTAddDist" />
+          <ScalarProperty Name="PMTAddState" ColumnName="PMTAddState" />
+          <ScalarProperty Name="PMTAddPin" ColumnName="PMTAddPin" />
+          <ScalarProperty Name="PMTAddTel" ColumnName="PMTAddTel" />
+          <ScalarProperty Name="PRAddVillage" ColumnName="PRAddVillage" />
+          <ScalarProperty Name="PRAddPO" ColumnName="PRAddPO" />
+          <ScalarProperty Name="PRAddTaluka" ColumnName="PRAddTaluka" />
+          <ScalarProperty Name="PRAddPoliceStn" ColumnName="PRAddPoliceStn" />
+          <ScalarProperty Name="PRAddDist" ColumnName="PRAddDist" />
+          <ScalarProperty Name="PRAddState" ColumnName="PRAddState" />
+          <ScalarProperty Name="PRAddPin" ColumnName="PRAddPin" />
+          <ScalarProperty Name="PRAddTel" ColumnName="PRAddTel" />
+          <ScalarProperty Name="SponsorName" ColumnName="SponsorName" />
+          <ScalarProperty Name="SponsorContactNo" ColumnName="SponsorContactNo" />
+          <ScalarProperty Name="SponsorDept" ColumnName="SponsorDept" />
+          <ScalarProperty Name="SponsorRelation" ColumnName="SponsorRelation" />
+          <ScalarProperty Name="SponsorCNo" ColumnName="SponsorCNo" />
+          <ScalarProperty Name="SponsorDesignation" ColumnName="SponsorDesignation" />
+          <ScalarProperty Name="SponsorTNo" ColumnName="SponsorTNo" />
+          <ScalarProperty Name="RecordOfMisconduct" ColumnName="RecordOfMisconduct" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserCreateDate" ColumnName="UserCreateDate" />
+          <ScalarProperty Name="UIDNo" ColumnName="UIDNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER_MASTER">
+      <EntityTypeMapping TypeName="VMSModel.USER_MASTER">
+        <MappingFragment StoreEntitySet="USER_MASTER">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="EMPTOKEN" ColumnName="EMPTOKEN" />
+          <ScalarProperty Name="ROLETYPEID" ColumnName="ROLETYPEID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ISACTIVE" ColumnName="ISACTIVE" />
+          <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+          <ScalarProperty Name="APPLICATIONRIGHTS" ColumnName="APPLICATIONRIGHTS" />
+          <ScalarProperty Name="DEPARTMENTID" ColumnName="DEPARTMENTID" />
+          <ScalarProperty Name="DEPARTMENTNAME" ColumnName="DEPARTMENTNAME" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATIONDATE" ColumnName="CREATIONDATE" />
+          <ScalarProperty Name="UPDATEDATE" ColumnName="UPDATEDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usermasters">
+      <EntityTypeMapping TypeName="VMSModel.usermaster">
+        <MappingFragment StoreEntitySet="usermaster">
+          <ScalarProperty Name="usertranid" ColumnName="usertranid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Empcode" ColumnName="Empcode" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="roletypeid" ColumnName="roletypeid" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="Cen_No" ColumnName="Cen_No" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Dept_ID" ColumnName="Dept_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleDetails">
+      <EntityTypeMapping TypeName="VMSModel.VehicleDetail">
+        <MappingFragment StoreEntitySet="VehicleDetails">
+          <ScalarProperty Name="SrNo" ColumnName="SrNo" />
+          <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+          <ScalarProperty Name="VisitorID" ColumnName="VisitorID" />
+          <ScalarProperty Name="Ofcr_Tran_Id" ColumnName="Ofcr_Tran_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitorLogDetails">
+      <EntityTypeMapping TypeName="VMSModel.VisitorLogDetail">
+        <MappingFragment StoreEntitySet="VisitorLogDetail">
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="VisitorTranID" ColumnName="VisitorTranID" />
+          <ScalarProperty Name="VisitorName" ColumnName="VisitorName" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="VehicleNumber" ColumnName="VehicleNumber" />
+          <ScalarProperty Name="Oragantization" ColumnName="Oragantization" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="PassType" ColumnName="PassType" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="VisitiorPhoto" ColumnName="VisitiorPhoto" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeMobile" ColumnName="EmployeeMobile" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserCreateDate" ColumnName="UserCreateDate" />
+          <ScalarProperty Name="numberOfPerson" ColumnName="numberOfPerson" />
+          <ScalarProperty Name="PassNumber" ColumnName="PassNumber" />
+          <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="barcodeID" ColumnName="barcodeID" />
+          <ScalarProperty Name="BarcodeIN" ColumnName="BarcodeIN" />
+          <ScalarProperty Name="BarcodeOUT" ColumnName="BarcodeOUT" />
+          <ScalarProperty Name="ID_Type" ColumnName="ID_Type" />
+          <ScalarProperty Name="ID_No" ColumnName="ID_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitorTransactionDetails">
+      <EntityTypeMapping TypeName="VMSModel.VisitorTransactionDetail">
+        <MappingFragment StoreEntitySet="VisitorTransactionDetail">
+          <ScalarProperty Name="VisitorTranID" ColumnName="VisitorTranID" />
+          <ScalarProperty Name="VisitorName" ColumnName="VisitorName" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="VehicleNumber" ColumnName="VehicleNumber" />
+          <ScalarProperty Name="Oragantization" ColumnName="Oragantization" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="PassType" ColumnName="PassType" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="VisitiorPhoto" ColumnName="VisitiorPhoto" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="HostID" ColumnName="HostID" />
+          <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeMobile" ColumnName="EmployeeMobile" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserCreateDate" ColumnName="UserCreateDate" />
+          <ScalarProperty Name="numberOfPerson" ColumnName="numberOfPerson" />
+          <ScalarProperty Name="PassNumber" ColumnName="PassNumber" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EmpType" ColumnName="EmpType" />
+          <ScalarProperty Name="File_Upload" ColumnName="File_Upload" />
+          <ScalarProperty Name="Firm_Tin_No" ColumnName="Firm_Tin_No" />
+          <ScalarProperty Name="V_Purpose" ColumnName="V_Purpose" />
+          <ScalarProperty Name="ES_Name" ColumnName="ES_Name" />
+          <ScalarProperty Name="ES_Rank" ColumnName="ES_Rank" />
+          <ScalarProperty Name="ES_TokenNo" ColumnName="ES_TokenNo" />
+          <ScalarProperty Name="ES_CardNo" ColumnName="ES_CardNo" />
+          <ScalarProperty Name="ES_Dept" ColumnName="ES_Dept" />
+          <ScalarProperty Name="Officer_Name" ColumnName="Officer_Name" />
+          <ScalarProperty Name="Officer_Designation" ColumnName="Officer_Designation" />
+          <ScalarProperty Name="DURATION" ColumnName="DURATION" />
+          <ScalarProperty Name="OFCR_TOKEN" ColumnName="OFCR_TOKEN" />
+          <ScalarProperty Name="OFCR_DEPT" ColumnName="OFCR_DEPT" />
+          <ScalarProperty Name="AADHAR_CARD" ColumnName="AADHAR_CARD" />
+          <ScalarProperty Name="AADHAR_DATA" ColumnName="AADHAR_DATA" />
+          <ScalarProperty Name="PAN_CARD" ColumnName="PAN_CARD" />
+          <ScalarProperty Name="PAN_CARD_DATA" ColumnName="PAN_CARD_DATA" />
+          <ScalarProperty Name="PASSPORT" ColumnName="PASSPORT" />
+          <ScalarProperty Name="PASSPORT_DATA" ColumnName="PASSPORT_DATA" />
+          <ScalarProperty Name="DRIVING_LICENCE" ColumnName="DRIVING_LICENCE" />
+          <ScalarProperty Name="DL_DATA" ColumnName="DL_DATA" />
+          <ScalarProperty Name="ID_No" ColumnName="ID_No" />
+          <ScalarProperty Name="ID_Type" ColumnName="ID_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

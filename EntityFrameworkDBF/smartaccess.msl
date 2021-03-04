@@ -1,0 +1,109 @@
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SmartAccessModelStoreContainer" CdmEntityContainer="SmartAccessEntities">
+    <EntitySetMapping Name="Controllers">
+      <EntityTypeMapping TypeName="SmartAccessModel.Controller">
+        <MappingFragment StoreEntitySet="Controllers">
+          <ScalarProperty Name="ControllerID" ColumnName="ControllerID" />
+          <ScalarProperty Name="ControllerNo" ColumnName="ControllerNo" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="SlaveID" ColumnName="SlaveID" />
+          <ScalarProperty Name="CompanyLocationID" ColumnName="CompanyLocationID" />
+          <ScalarProperty Name="ControllerAuthenticationTypeID" ColumnName="ControllerAuthenticationTypeID" />
+          <ScalarProperty Name="CommunicationTypeID" ColumnName="CommunicationTypeID" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="PortNo" ColumnName="PortNo" />
+          <ScalarProperty Name="NoOfReaders" ColumnName="NoOfReaders" />
+          <ScalarProperty Name="ResponseTimeMultiplier" ColumnName="ResponseTimeMultiplier" />
+          <ScalarProperty Name="ModelMasterID" ColumnName="ModelMasterID" />
+          <ScalarProperty Name="SwipeFrequencyTime" ColumnName="SwipeFrequencyTime" />
+          <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+          <ScalarProperty Name="ServerIPStatus" ColumnName="ServerIPStatus" />
+          <ScalarProperty Name="APBStatus" ColumnName="APBStatus" />
+          <ScalarProperty Name="APBType" ColumnName="APBType" />
+          <ScalarProperty Name="DNS" ColumnName="DNS" />
+          <ScalarProperty Name="MailServerName" ColumnName="MailServerName" />
+          <ScalarProperty Name="AuthEmailID" ColumnName="AuthEmailID" />
+          <ScalarProperty Name="EmailPassword" ColumnName="EmailPassword" />
+          <ScalarProperty Name="MailStatus" ColumnName="MailStatus" />
+          <ScalarProperty Name="ReaderCombination" ColumnName="ReaderCombination" />
+          <ScalarProperty Name="Netmask" ColumnName="Netmask" />
+          <ScalarProperty Name="Gateway" ColumnName="Gateway" />
+          <ScalarProperty Name="ControllerTypeID" ColumnName="ControllerTypeID" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="MarkDeleted" ColumnName="MarkDeleted" />
+          <ScalarProperty Name="DefaultGateway" ColumnName="DefaultGateway" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="MACAddress" ColumnName="MACAddress" />
+          <ScalarProperty Name="DeviceIP" ColumnName="DeviceIP" />
+          <ScalarProperty Name="DevicePortNo" ColumnName="DevicePortNo" />
+          <ScalarProperty Name="IsMac" ColumnName="IsMac" />
+          <ScalarProperty Name="IsEnrolment" ColumnName="IsEnrolment" />
+          <ScalarProperty Name="ModelTypeID" ColumnName="ModelTypeID" />
+          <ScalarProperty Name="BioEnrollType" ColumnName="BioEnrollType" />
+          <ScalarProperty Name="ControllerCommunicationTypeID" ColumnName="ControllerCommunicationTypeID" />
+          <ScalarProperty Name="DynaDNS" ColumnName="DynaDNS" />
+          <ScalarProperty Name="ResetAPBStatus" ColumnName="ResetAPBStatus" />
+          <ScalarProperty Name="ProcessStr" ColumnName="ProcessStr" />
+          <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+          <ScalarProperty Name="Remote_Host" ColumnName="Remote_Host" />
+          <ScalarProperty Name="IsTransactionDownload" ColumnName="IsTransactionDownload" />
+          <ScalarProperty Name="PINStatus" ColumnName="PINStatus" />
+          <ScalarProperty Name="FacilityCode" ColumnName="FacilityCode" />
+          <ScalarProperty Name="LastTrn_TM" ColumnName="LastTrn_TM" />
+          <ScalarProperty Name="LastHB_TM" ColumnName="LastHB_TM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceTemplates">
+      <EntityTypeMapping TypeName="SmartAccessModel.DeviceTemplate">
+        <MappingFragment StoreEntitySet="DeviceTemplates">
+          <ScalarProperty Name="MarkDeleted" ColumnName="MarkDeleted" />
+          <ScalarProperty Name="TryCount" ColumnName="TryCount" />
+          <ScalarProperty Name="TemplateType" ColumnName="TemplateType" />
+          <ScalarProperty Name="SynchStatus" ColumnName="SynchStatus" />
+          <ScalarProperty Name="TemplateSource" ColumnName="TemplateSource" />
+          <ScalarProperty Name="SynchTime" ColumnName="SynchTime" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="ControllerID" ColumnName="ControllerID" />
+          <ScalarProperty Name="TemplateSize" ColumnName="TemplateSize" />
+          <ScalarProperty Name="TemplateData" ColumnName="TemplateData" />
+          <ScalarProperty Name="TemplateNo" ColumnName="TemplateNo" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="DeviceTemplateID" ColumnName="DeviceTemplateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="SmartAccessModel.Transaction">
+        <MappingFragment StoreEntitySet="Transactions">
+          <ScalarProperty Name="CanteenMenuCodeID" ColumnName="CanteenMenuCodeID" />
+          <ScalarProperty Name="CanteenMenuCode" ColumnName="CanteenMenuCode" />
+          <ScalarProperty Name="INOUTDATE_R2" ColumnName="INOUTDATE_R2" />
+          <ScalarProperty Name="EmployeemasterID" ColumnName="EmployeemasterID" />
+          <ScalarProperty Name="ControllerCompanyLocationID" ColumnName="ControllerCompanyLocationID" />
+          <ScalarProperty Name="IOCOUNT_R2" ColumnName="IOCOUNT_R2" />
+          <ScalarProperty Name="INOUT_R2" ColumnName="INOUT_R2" />
+          <ScalarProperty Name="IOCOUNT" ColumnName="IOCOUNT" />
+          <ScalarProperty Name="INOUT" ColumnName="INOUT" />
+          <ScalarProperty Name="INOUTDate" ColumnName="INOUTDate" />
+          <ScalarProperty Name="ChannelNo" ColumnName="ChannelNo" />
+          <ScalarProperty Name="TranSendsServiceID" ColumnName="TranSendsServiceID" />
+          <ScalarProperty Name="EventMessageName" ColumnName="EventMessageName" />
+          <ScalarProperty Name="PCIPAddress" ColumnName="PCIPAddress" />
+          <ScalarProperty Name="FacilityCode" ColumnName="FacilityCode" />
+          <ScalarProperty Name="ReadPointer" ColumnName="ReadPointer" />
+          <ScalarProperty Name="TransactionCount" ColumnName="TransactionCount" />
+          <ScalarProperty Name="aDateTime" ColumnName="aDateTime" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+          <ScalarProperty Name="EmployeeFunctionCardID" ColumnName="EmployeeFunctionCardID" />
+          <ScalarProperty Name="CSNNo" ColumnName="CSNNo" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="ControllerID" ColumnName="ControllerID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

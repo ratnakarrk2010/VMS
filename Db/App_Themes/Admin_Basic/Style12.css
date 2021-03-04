@@ -1,0 +1,503 @@
+@charset "utf-8";
+/* CSS Document */
+/* whire frame start */
+body  {
+	margin: 0;
+	padding: 0;
+	color: #444444;
+	background-color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif, Verdana;
+	font-size: 90%;
+}
+
+#body{
+width:100%;
+margin: 0 auto;
+}
+
+.twoColLiqLtHdr #container {
+	width: 1200px;  
+	background: #FFFFFF;
+	margin: 0 auto; 
+	text-align: left; 
+	box-shadow: 0 0px 5px lightgrey;
+    
+} 
+.twoColLiqLtHdr #header { 
+	background: #FFFFFF;
+	padding: 0px;
+	margin:0px;
+	width:100%;
+    
+    border-bottom: 2px solid blue;
+    background-color:#95d9e8;
+} 
+
+.container {
+    border: solid 1px #ff0000;
+    zoom: 1; /* IE6&7 */
+   
+}
+
+.container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
+
+h1{
+padding:0px;
+}
+
+h2{
+font-size:100%;
+font-size:1.2em;
+font-family: Arial, Helvetica, sans-serif, Verdana;
+color:#145d7f;
+margin:0px;
+padding-top:5px;
+width:100%;
+text-align:left;
+border-bottom: 1px solid #8fc2e5;
+}
+img{
+border:0px;
+}
+
+/* Tips for sidebar1:
+1. since we are working in percentages, it's best not to use padding on the sidebar. It will be added to the width for standards compliant browsers creating an unknown actual width. 
+2. Space between the side of the div and the elements within it can be created by placing a left and right margin on those elements as seen in the ".twoColLiqLtHdr #sidebar1 p" rule.
+3. Since Explorer calculates widths after the parent element is rendered, you may occasionally run into unexplained bugs with percentage-based columns. If you need more predictable results, you may choose to change to pixel sized columns.
+*/
+.twoColLiqLtHdr  #sidebar1 {
+	float: left;
+	width: 20%;
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0px;
+	padding-left: 0;
+	margin-top:5px;
+	margin-left:0.5%;
+    font-size:100%;
+    
+}
+ .twoColLiqLtHdr #sidebar1 p {
+	margin-left: 10px; 
+	margin-right: 10px;
+	margin-bottom:0px;
+	margin-top:0px;
+    font-size:100%;
+}
+
+/* Tips for mainContent:
+1. the space between the mainContent and sidebar1 is created with the left margin on the mainContent div.  No matter how much content the sidebar1 div contains, the column space will remain. You can remove this left margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends.
+2. to avoid float drop at a supported minimum 800 x 600 resolution, elements within the mainContent div should be 430px or smaller (this includes images).
+3. in the Internet Explorer Conditional Comment below, the zoom property is used to give the mainContent "hasLayout." This avoids several IE-specific bugs.
+*/
+.twoColLiqLtHdr #mainContent {
+	padding:10px;
+    background-color:#cbecf3;
+} 
+.twoColLiqLtHdr #footer {
+	background:#DDDDDD;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+} */
+.twoColLiqLtHdr.footer{
+	padding: 0 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	-khtml-border-radius: 10px 10px 10px 10px;
+	border:1px solid #7bc2d9;
+	background-color:#b8e1ff;
+	height:30px;
+	width:97%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:5px;
+	margin-bottom:0px;
+	font-family: Arial, Helvetica, sans-serif, Verdana;
+	color:#36749f;
+	font-size: 100%;
+
+}
+
+.twoColLiqLtHdr #mainContent hr
+{
+    width:100% !important;    
+}
+
+/* Miscellaneous classes for reuse */
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:2;
+    font-size: 1px;
+    line-height: 0px;
+    width:100%
+}
+/* whire frame end */
+
+/* content css start */
+a{
+cursor:default;
+text-decoration:none;
+font-size:100%;
+color:#333333;
+font-family: Arial, Helvetica, sans-serif, Verdana;
+}
+
+a:hover{
+text-decoration:underline;
+color:#666666;
+}
+.clear{
+clear:both;
+height:2px;
+}
+
+
+.adminName{
+font-size: 100%;
+font-family: Arial, Helvetica, sans-serif, Verdana;
+text-align:right;
+color:#dd3002;
+}
+
+.topmenu{
+font-size: 100%;
+font-family: Arial, Helvetica, sans-serif, Verdana;
+text-align:right;
+}
+
+.topmenu a{
+font-size: 100%;
+font-family: Arial, Helvetica, sans-serif, Verdana;
+text-align:right;
+text-decoration:none;
+cursor:pointer;
+color:#3b3b3b;
+}
+
+.topmenu a:hover{
+text-decoration:underline;
+}
+
+
+.newsalarts{
+width:98%;
+-moz-border-radius: 10px 10px 10px 10px;
+border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-khtml-border-radius: 10px 10px 10px 10px;
+border:1px solid #7bc2d9;
+background-color:#cbe9fe;
+margin-top:0px;
+font-size: 100%;
+
+}
+
+.subhead{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#024260;
+	padding:5px;
+}
+
+.subhead1{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:100%;
+	color:#3b78a1;
+	padding:2px;
+}
+
+.subhead2 a{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:100%;
+	color:#1a6d94;
+	padding:5px;
+	text-decoration:none;
+	cursor:default;
+	width:100%;
+}
+
+.subhead2 a:hover{
+text-decoration:underline;
+color:#4d9fc5;
+}
+
+.whitebg{
+
+-moz-border-radius: 0px 0px 5px 5px;
+border-radius: 0px 0px 5px 5px;
+-webkit-border-radius: 0px 0px 5px 5px;
+-khtml-border-radius: 0px 0px 5px 5px;
+background-color:#FFFFFF;
+
+}
+
+.rect
+{
+-moz-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px;
+-webkit-border-radius: 5px 5px 5px 5px;
+-khtml-border-radius: 5px 5px 5px 5px;
+border:1px solid #a3cbe5;
+background-color:#ebf5fc;
+margin-top:5px;
+width:99%;
+padding-bottom:3px;
+}
+.rect1
+{
+-moz-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px;
+-webkit-border-radius: 5px 5px 5px 5px;
+-khtml-border-radius: 5px 5px 5px 5px;
+border:1px solid #a3cbe5;
+background-color:#ebf5fc;
+margin-top:5px;
+width:98%;
+}
+
+
+/* tab manu   */
+
+.marginbot {
+margin-bottom:0px;
+}
+
+ul.list li {
+list-style-type:none;
+margin-left:20px;
+margin-bottom:0px;
+padding:0px;
+}
+
+ul.tabs {
+width:96%;
+overflow:hidden;
+margin:3px 0px 0px 0px;
+padding:0px;
+}
+
+ul.tabs li {
+list-style-type:none;
+display:block;
+float:left;
+color:#000000;
+padding-top: 0px;
+padding-right: 10px;
+padding-bottom: 0px;
+padding-left: 10px;
+margin-right:0px;
+border-left:1px solid #8cafbd;
+border-right:1px solid #8cafbd;
+border-top:1px solid #8cafbd;
+border-bottom:2px solid #8cafbd;
+background-color:#a7bbc3;
+-moz-border-radius: 0px 5px 0 0;
+-webkit-border-radius: 0px 5px 0 0;
+border-radius: 0px 5px 0 0;
+-khtml-border-radius: 0px 5px 0 0;
+cursor:default;
+margin-bottom:0px;
+font-size:100%;
+}
+
+ul.tabs li:hover {
+background-color:#ffffff;
+}
+
+ul.tabs li.current {
+	border-bottom:2px solid #e2f4fd;
+	background-color:#e2f4fd;
+	color:#134e76;
+	border-left:1px solid #8cafbd;
+	border-right:1px solid #8cafbd;
+	border-top:1px solid #8cafbd;
+	padding-top: 0px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	-moz-border-radius: 5px 5px 0 0;
+-webkit-border-radius: 5px 5px 0 0;
+border-radius: 5px 5px 0 0;
+-khtml-border-radius: 5px 5px 0 0;
+}
+
+.tabscontent {
+border-top:2px solid #e2f4fd;
+border-left:1px solid #8cafbd;
+border-right:1px solid #8cafbd;
+border-bottom:1px solid #8cafbd;
+padding:0px;
+display:none;
+width:100%;
+text-align:justify;
+margin-top:-1px;
+background-color:#e2f4fd;
+-moz-border-radius: 0px 5px 5px 5px;
+-webkit-border-radius: 0px 5px 5px 5px;
+border-radius: 0px 5px 5px 5px;
+-khtml-border-radius: 0px 5px 5px 5px;
+}
+
+/* inner tabs manu   */
+.subTabs {
+list-style-type:none;
+display:block;
+float:left;
+color:#022638;
+border-left:1px solid #66a2cb;
+border-right:1px solid #66a2cb;
+border-top:1px solid #66a2cb;
+border-bottom:2px solid #66a2cb;
+background-color:#82c0ea;
+-moz-border-radius: 5px 5px 0 0;
+-webkit-border-radius: 0px 5px 0 0;
+border-radius: 0px 5px 0 0;
+-khtml-border-radius: 0px 5px 0 0;
+cursor:default;
+margin-bottom:0px;
+font-size:100%;
+}
+
+.subTabs:hover {
+background-color:#cbeafe;
+}
+
+.subTabs.current {
+	border-bottom:2px solid #cbeafe;
+	background-color:#cbeafe;
+	color:#022638;
+	border-left:1px solid #b5dbf4;
+	border-right:1px solid #b5dbf4;
+	border-top:1px solid #b5dbf4;
+	padding-top: 3px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	-moz-border-radius: 5px 5px 0 0;
+-webkit-border-radius: 5px 5px 0 0;
+border-radius: 5px 5px 0 0;
+-khtml-border-radius: 5px 5px 0 0;
+}
+
+.subTabsContent {
+border-top:2px solid #cbeafe;
+border-left:1px solid #b5dbf4;
+border-right:1px solid #b5dbf4;
+border-bottom:1px solid #b5dbf4;
+padding:0px;
+display:none;
+width:100%;
+text-align:justify;
+margin-top:-1px;
+background-color:#cbeafe;
+-moz-border-radius: 0px 5px 5px 5px;
+-webkit-border-radius: 0px 5px 5px 5px;
+border-radius: 0px 5px 5px 5px;
+-khtml-border-radius: 0px 5px 5px 5px;
+}
+
+
+.allborder
+{
+    border: 2px solid blue;
+    clear:both;
+   
+}
+
+
+.bxborder{
+border:2px solid #73add7;
+}
+
+.bxborder12{
+border:1px solid #73add7;
+}
+.topborder{
+border-top:1px solid #73add7;
+}
+
+.rightborder{
+border-right:1px solid #73add7;
+}
+
+p{
+padding:5px;
+margin:5px;
+}
+
+#frm_login_show_hide{
+background-color:Blue;
+font-size:12px;
+color:White;
+padding:3px;
+margin-top:0px;
+cursor:hand;
+cursor:pointer;
+float:right;
+
+position:absolute;
+ top:32px;
+left:100px; 
+
+}
+
+fieldset{
+border:1px solid #73add7;
+font-size:13px;
+margin-top:5px;
+margin-bottom:5px;
+}
+
+.dashBorder td
+{
+    border:1px dashed #000000 !important;    
+}
+
+.bck
+{
+    /*background-image: url('images/textbox2.png');*/
+   /* font-family:Arial;
+    font-size:small;
+    margin-left:0px;
+    border:1px solid #3cb8d3;*/
+    border:none;
+    height:25px;
+    border-bottom:2px solid #3cb8d3;
+    border-left:2px solid #3cb8d3;
+}
+.bck:focus
+{
+    box-shadow:inset 1px 1px 2px 0 #c9c9c9;
+    box-shadow: 0px 0px 5px 1px #3cb8d3;    
+}
+.drp
+{
+    border:none;
+    height: 30px; 
+    border-bottom:2px solid #3cb8d3;
+    border-left:2px solid #3cb8d3;
+}
+.drp:focus
+{
+    box-shadow:inset 1px 1px 2px 0 #c9c9c9;
+    box-shadow: 0px 0px 5px 1px #3cb8d3;    
+}

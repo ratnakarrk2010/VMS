@@ -1,0 +1,159 @@
+/* ######### CSS for top level tabs ######### */
+.ChangeLinkBack
+{
+	background-color:Yellow;
+	}
+.tabsmenuclass ul
+{
+	overflow: hidden;
+	width: auto;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+}
+
+.tabsmenuclass li
+{
+	float: left;
+}
+
+.tabsmenuclass a.ajax__tab_tab
+{
+	
+	display: block;
+	color: black;
+	margin-right: 1px;
+	text-decoration: none;
+	background-color: #4f8eb9;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	cursor:pointer;
+	margin-top:9px;
+	padding-top: 5px;
+	padding-right: 15px;
+	padding-bottom: 4px;
+	padding-left: 20px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	-khtml-border-radius: 10px 10px 0px 0px;
+	border-top: 1px solid #4f8eb9;
+	border-right: 1px solid #4f8eb9;
+	border-left: 1px solid #4f8eb9;
+	background-image: url(../images/icon2.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	background: -moz-linear-gradient(top, #96dcf0 0%, #c9edff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#96dcf0), color-stop(100%,#c9edff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #96dcf0 0%,#c9edff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #96dcf0 0%,#c9edff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #96dcf0 0%,#c9edff 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #96dcf0 0%,#c9edff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96dcf0', endColorstr='#c9edff',GradientType=0 ); /* IE6-9 */
+	
+}
+.tabsmenuclass a.ajax__tab_tab.selected
+{
+	color: red;
+	border-top: 1px solid #4f8eb9;
+	border-right: 1px solid #4f8eb9;
+	border-left: 1px solid #4f8eb9;
+	background-image: url(../images/icon1.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	background-color: #caf1fe;
+	
+}
+.tabsmenuclass a.ajax__tab_tab:hover
+{
+	color: red;
+	border-top: 1px solid #4f8eb9;
+	border-right: 1px solid #4f8eb9;
+	border-left: 1px solid #4f8eb9;
+	background-image: url(../images/icon1.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	background-color: #caf1fe;
+	
+}
+
+.backbottom
+{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #A9DAF2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#A9DAF2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#A9DAF2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#A9DAF2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#A9DAF2 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#A9DAF2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#A9DAF2',GradientType=0 ); /* IE6-9 */
+}
+/* ######### CSS for sub menu container below ######### */
+
+.tabsmenucontentclass
+{
+	clear: left;
+	background: #bde3fd;
+	width: auto;
+	height: 15px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 95%;
+	padding-top: 4px;
+	padding-right: 7px;
+	padding-bottom: 4px;
+	padding-left: 7px;
+	border-left: 1px solid #4f8eb9;
+	border-bottom: 1px solid #4f8eb9;
+}
+
+.tabsmenucontentclass ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.tabsmenucontentclass li
+{
+	float: left;
+	margin-right: 1em;
+	
+}
+
+.tabsmenucontentclass li a
+{
+	text-decoration: none;
+	color: #014574;
+	
+}
+
+.tabsmenucontentclass li a:hover
+{
+	text-decoration: underline;
+	color: #014574;
+}
+
+
+/* ######### icons css ######### */
+
+.ic1
+{
+	background-image: url(../images/icon1.png);
+	background-repeat: no-repeat;
+}
+
+.ajax__tab_active a.ajax__tab_tab
+{
+	color:black;
+    background: #caf1fe;
+    padding-top:7px;
+    Padding-bottom:7px;
+    font-weight:500;
+    font-size:95%;
+
+}
+

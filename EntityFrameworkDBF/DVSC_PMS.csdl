@@ -1,0 +1,1005 @@
+<Schema Namespace="VMSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="VMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="APPLICATION_FORM" EntityType="VMSModel.APPLICATION_FORM" />
+    <EntitySet Name="CANCEL_LOG" EntityType="VMSModel.CANCEL_LOG" />
+    <EntitySet Name="CANCEL_REASON_MASTER" EntityType="VMSModel.CANCEL_REASON_MASTER" />
+    <EntitySet Name="CasualDetails" EntityType="VMSModel.CasualDetail" />
+    <EntitySet Name="Conf_Detail" EntityType="VMSModel.Conf_Detail" />
+    <EntitySet Name="Conf_Detail_Audit" EntityType="VMSModel.Conf_Detail_Audit" />
+    <EntitySet Name="Conf_ScheduleDate" EntityType="VMSModel.Conf_ScheduleDate" />
+    <EntitySet Name="Conf_ScheduleTime" EntityType="VMSModel.Conf_ScheduleTime" />
+    <EntitySet Name="Conf_Time" EntityType="VMSModel.Conf_Time" />
+    <EntitySet Name="Conf_Type" EntityType="VMSModel.Conf_Type" />
+    <EntitySet Name="CONTRACTOR_DETAIL" EntityType="VMSModel.CONTRACTOR_DETAIL" />
+    <EntitySet Name="ContractorDetails" EntityType="VMSModel.ContractorDetail" />
+    <EntitySet Name="ContractorIDDetails" EntityType="VMSModel.ContractorIDDetail" />
+    <EntitySet Name="COUNTRY_MASTER" EntityType="VMSModel.COUNTRY_MASTER" />
+    <EntitySet Name="CountryMasters" EntityType="VMSModel.CountryMaster" />
+    <EntitySet Name="DepartmentMasters" EntityType="VMSModel.DepartmentMaster" />
+    <EntitySet Name="DESIGNATION_MASTER" EntityType="VMSModel.DESIGNATION_MASTER" />
+    <EntitySet Name="DOCUMENT_MASTER" EntityType="VMSModel.DOCUMENT_MASTER" />
+    <EntitySet Name="EscortMasters" EntityType="VMSModel.EscortMaster" />
+    <EntitySet Name="Files" EntityType="VMSModel.File" />
+    <EntitySet Name="Firm_Master" EntityType="VMSModel.Firm_Master" />
+    <EntitySet Name="FIRMMASTERs" EntityType="VMSModel.FIRMMASTER" />
+    <EntitySet Name="Gadget_Details" EntityType="VMSModel.Gadget_Details" />
+    <EntitySet Name="GENDER_MASTER" EntityType="VMSModel.GENDER_MASTER" />
+    <EntitySet Name="HostMasters" EntityType="VMSModel.HostMaster" />
+    <EntitySet Name="LabourTransactions" EntityType="VMSModel.LabourTransaction" />
+    <EntitySet Name="Officer_Transaction" EntityType="VMSModel.Officer_Transaction" />
+    <EntitySet Name="OfficerMasters" EntityType="VMSModel.OfficerMaster" />
+    <EntitySet Name="PASSTYPE_MASTER" EntityType="VMSModel.PASSTYPE_MASTER" />
+    <EntitySet Name="PSU_MASTER" EntityType="VMSModel.PSU_MASTER" />
+    <EntitySet Name="RELIGION_MASTER" EntityType="VMSModel.RELIGION_MASTER" />
+    <EntitySet Name="role_master" EntityType="VMSModel.role_master" />
+    <EntitySet Name="ROLEMASTERs" EntityType="VMSModel.ROLEMASTER" />
+    <EntitySet Name="SHOP_MASTER" EntityType="VMSModel.SHOP_MASTER" />
+    <EntitySet Name="STATE_MASTER" EntityType="VMSModel.STATE_MASTER" />
+    <EntitySet Name="TEMP_GV" EntityType="VMSModel.TEMP_GV" />
+    <EntitySet Name="TempCasualVisitors" EntityType="VMSModel.TempCasualVisitor" />
+    <EntitySet Name="TempLabourLists" EntityType="VMSModel.TempLabourList" />
+    <EntitySet Name="TemporaryDetails" EntityType="VMSModel.TemporaryDetail" />
+    <EntitySet Name="USER_MASTER" EntityType="VMSModel.USER_MASTER" />
+    <EntitySet Name="usermasters" EntityType="VMSModel.usermaster" />
+    <EntitySet Name="VehicleDetails" EntityType="VMSModel.VehicleDetail" />
+    <EntitySet Name="VisitorLogDetails" EntityType="VMSModel.VisitorLogDetail" />
+    <EntitySet Name="VisitorTransactionDetails" EntityType="VMSModel.VisitorTransactionDetail" />
+    <AssociationSet Name="FK_APPLICATION_FORM_CONTRACTOR_DETAIL" Association="VMSModel.FK_APPLICATION_FORM_CONTRACTOR_DETAIL">
+      <End Role="CONTRACTOR_DETAIL" EntitySet="CONTRACTOR_DETAIL" />
+      <End Role="APPLICATION_FORM" EntitySet="APPLICATION_FORM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HostMaster_DepartmentMaster" Association="VMSModel.FK_HostMaster_DepartmentMaster">
+      <End Role="DepartmentMaster" EntitySet="DepartmentMasters" />
+      <End Role="HostMaster" EntitySet="HostMasters" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="APPLICATION_FORM">
+    <Key>
+      <PropertyRef Name="APP_ID" />
+    </Key>
+    <Property Name="APP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="APP_NUMBER" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CONT_ID" Type="Int32" Nullable="false" />
+    <Property Name="DELETE_FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="APP_FORM" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="APP_DATE" Type="DateTime" />
+    <NavigationProperty Name="CONTRACTOR_DETAIL" Relationship="VMSModel.FK_APPLICATION_FORM_CONTRACTOR_DETAIL" FromRole="APPLICATION_FORM" ToRole="CONTRACTOR_DETAIL" />
+  </EntityType>
+  <EntityType Name="CANCEL_LOG">
+    <Key>
+      <PropertyRef Name="Cancel_Id" />
+    </Key>
+    <Property Name="Cancel_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cancel_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cancel_Firm" Type="Int32" />
+    <Property Name="Cancel_PassNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cancel_Cr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cancel_PlaceLoss" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cancel_Fine" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cancel_Date" Type="DateTime" />
+    <Property Name="Loss_Date" Type="DateTime" />
+    <Property Name="Loss_Fir" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Dockyard_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CANCEL_REASON_MASTER">
+    <Key>
+      <PropertyRef Name="CR_ID" />
+    </Key>
+    <Property Name="CR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CR_NAME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="CasualDetail">
+    <Key>
+      <PropertyRef Name="CasualTranId" />
+    </Key>
+    <Property Name="CasualTranId" Type="Int32" Nullable="false" />
+    <Property Name="CasualName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Organization" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfIssue" Type="DateTime" />
+    <Property Name="RecommendingUnit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="WorkSite" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NatureOfWork" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CardNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DurationOfVisit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Department" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CasualPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Height" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ColorOfEye" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ColorOfHair" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdentificationMark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" />
+    <Property Name="NativePlace" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BloodGroup" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Religion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="PTMAddVillage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddTaluke" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPoliceStn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddDist" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPin" Type="Int32" />
+    <Property Name="PMTAddTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PRAddVillage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddTaluka" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPoliceStn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddDist" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPin" Type="Int32" />
+    <Property Name="PRAddTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="RecordOfMisconduct" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserCreateDate" Type="DateTime" />
+    <Property Name="UIDNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Conf_Detail">
+    <Key>
+      <PropertyRef Name="Conf_ID" />
+    </Key>
+    <Property Name="Conf_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Conf_Dept" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conf_Center" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conf_Purpose" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conf_Firm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conf_TypeID" Type="Int32" />
+    <Property Name="Conf_DateID" Type="DateTime" />
+    <Property Name="Conf_CreatedDate" Type="DateTime" />
+    <Property Name="Status" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatebBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conf_StartTime" Type="Time" />
+    <Property Name="Conf_EndTime" Type="Time" />
+    <Property Name="Conf_Hall" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Booking_Status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Conf_Sys_Date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="Conf_Detail_Audit">
+    <Key>
+      <PropertyRef Name="Audit_ID" />
+    </Key>
+    <Property Name="Audit_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Conf_ID" Type="Int32" />
+    <Property Name="Conf_Dept" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conf_Center" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conf_Purpose" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conf_Firm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conf_TypeID" Type="Int32" />
+    <Property Name="Conf_DateID" Type="DateTime" />
+    <Property Name="Conf_CreatedDate" Type="DateTime" />
+    <Property Name="Status" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatebBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conf_StartTime" Type="Time" />
+    <Property Name="Conf_EndTime" Type="Time" />
+    <Property Name="Conf_Hall" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Booking_Status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Action_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Conf_ScheduleDate">
+    <Key>
+      <PropertyRef Name="Conf_DateID" />
+    </Key>
+    <Property Name="Conf_DateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Conf_Date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="Conf_ScheduleTime">
+    <Key>
+      <PropertyRef Name="Conf_TimeID" />
+    </Key>
+    <Property Name="Conf_TimeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Conf_TypeID" Type="Int32" />
+    <Property Name="Conf_StartTime" Type="Time" />
+    <Property Name="Conf_EndTime" Type="Time" />
+    <Property Name="ConDetails" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Conf_Time">
+    <Key>
+      <PropertyRef Name="Conf_TimeID" />
+    </Key>
+    <Property Name="Conf_TimeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Time" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Conf_Type">
+    <Key>
+      <PropertyRef Name="Conf_TypeID" />
+    </Key>
+    <Property Name="Conf_TypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Conf_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="CONTRACTOR_DETAIL">
+    <Key>
+      <PropertyRef Name="Cont_Id" />
+    </Key>
+    <Property Name="Cont_Id" Type="Int32" Nullable="false" />
+    <Property Name="Cont_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_DOB" Type="DateTime" />
+    <Property Name="Cont_Aadhaar" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_Mobile" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Cont_FirmFileNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_FirmID" Type="Int32" Nullable="false" />
+    <Property Name="Cont_FirmWO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_WOValidity" Type="DateTime" />
+    <Property Name="Cont_Unit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_PmtAddress" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_StateID" Type="Int32" Nullable="false" />
+    <Property Name="Cont_NationalityID" Type="Int32" Nullable="false" />
+    <Property Name="Cont_AppNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_AppPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Cont_PVCNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_PVCValidity" Type="DateTime" />
+    <Property Name="Cont_RFIDNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_RFIDValidity" Type="DateTime" />
+    <Property Name="Cont_FingerPrint" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Cont_CardNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_Delete_Flag" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Cont_DesignationID" Type="Int32" Nullable="false" />
+    <Property Name="Cont_ReligionID" Type="Int32" Nullable="false" />
+    <Property Name="Cont_Gender" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_Pin" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_Taluka" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_District" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_IssueDate" Type="DateTime" />
+    <Property Name="Cont_CreatedDate" Type="DateTime" />
+    <Property Name="Cont_CancelFLag" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_CancelReason" Type="Int32" Nullable="false" />
+    <Property Name="Cont_PassType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_DateOFLoss" Type="DateTime" />
+    <Property Name="Cont_PlaceOfLoss" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_Fine" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_Fir" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_CancelDate" Type="DateTime" />
+    <Property Name="Cont_BlackList" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_IcardrNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_PSUunitID" Type="Int32" />
+    <Property Name="Cont_UnitEmp" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cont_DocID" Type="Int32" />
+    <NavigationProperty Name="APPLICATION_FORM" Relationship="VMSModel.FK_APPLICATION_FORM_CONTRACTOR_DETAIL" FromRole="CONTRACTOR_DETAIL" ToRole="APPLICATION_FORM" />
+    <Property Type="Int32" Name="Cont_ShopId" />
+  </EntityType>
+  <EntityType Name="ContractorDetail">
+    <Key>
+      <PropertyRef Name="ContractorTranId" />
+    </Key>
+    <Property Name="ContractorTranId" Type="Int32" Nullable="false" />
+    <Property Name="ContractorName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ContractorFirm" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ContractorCardNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContractorPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfIssue" Type="DateTime" />
+    <Property Name="Height" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdentificationMark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ColorOfEye" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="ColorOfHair" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" />
+    <Property Name="BloodGroup" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Religion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NativePlace" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NOK" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Relation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PVCDate" Type="DateTime" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EscortType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfExpire" Type="DateTime" />
+    <Property Name="PTMAddVillage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddTaluke" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPoliceStn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddDist" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPin" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddTel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddVillage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddTaluka" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPoliceStn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddDist" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPin" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddTel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FirmAddress" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FirmProprietor" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmValidity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmWorkOrderNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmWorkSite" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmSponsor" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmRegNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmNatureOfWork" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RecordOfMisconduct" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserCreateDate" Type="DateTime" />
+    <Property Name="Remarks" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DocType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DocNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="oldrecord" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RecommandedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UIDNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="sex" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="FirmID" Type="Int32" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NATIONALITY" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ContractorIDDetail">
+    <Key>
+      <PropertyRef Name="ContractorTranId" />
+    </Key>
+    <Property Name="ContractorTranId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractorName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ContractorFirm" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ContractorCardNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContractorPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfIssue" Type="DateTime" />
+    <Property Name="Height" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdentificationMark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ColorOfEye" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="ColorOfHair" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" />
+    <Property Name="BloodGroup" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Religion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NativePlace" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NOK" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Relation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PVCDate" Type="DateTime" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EscortType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfExpire" Type="DateTime" />
+    <Property Name="PTMAddVillage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddTaluke" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPoliceStn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddDist" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPin" Type="Int32" />
+    <Property Name="PMTAddTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PRAddVillage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddTaluka" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPoliceStn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddDist" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPin" Type="Int32" />
+    <Property Name="PRAddTel" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="FirmName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FirmAddress" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FirmProprietor" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmValidity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmWorkOrderNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmWorkSite" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmSponsor" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmRegNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmNatureOfWork" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RecordOfMisconduct" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserCreateDate" Type="DateTime" />
+    <Property Name="RecommandedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DocType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DocNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UIDNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SEX" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="FileNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NATIONALITY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmID" Type="Int32" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="Center_No" Type="Int32" />
+  </EntityType>
+  <EntityType Name="COUNTRY_MASTER">
+    <Key>
+      <PropertyRef Name="COUNTRY_ID" />
+    </Key>
+    <Property Name="COUNTRY_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COUNTRY_NAME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="NATIONALITY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="CountryMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nationality" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Country_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="DepartmentMaster">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="createdon" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="HostMasters" Relationship="VMSModel.FK_HostMaster_DepartmentMaster" FromRole="DepartmentMaster" ToRole="HostMaster" />
+  </EntityType>
+  <EntityType Name="DESIGNATION_MASTER">
+    <Key>
+      <PropertyRef Name="DESIGNATION_ID" />
+    </Key>
+    <Property Name="DESIGNATION_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESIGNATION_NAME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="DOCUMENT_MASTER">
+    <Key>
+      <PropertyRef Name="DOCUMENT_ID" />
+    </Key>
+    <Property Name="DOCUMENT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DOCUMENT_NAME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="EscortMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ES_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_Rank" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_TokenNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_Dept" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Officer_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Officer_Designation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Officer_Token" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_MobNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Flag" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="File">
+    <Key>
+      <PropertyRef Name="Sr_No" />
+    </Key>
+    <Property Name="Sr_No" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="File_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="File_Type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="File_Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="Remark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Firm_Master">
+    <Key>
+      <PropertyRef Name="Firm_ID" />
+    </Key>
+    <Property Name="Firm_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firm_Name" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Proprietor_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Registered_Date" Type="DateTime" />
+    <Property Name="Firm_Address" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Firm_Tin" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="FIRMMASTER">
+    <Key>
+      <PropertyRef Name="FIRM_ID" />
+    </Key>
+    <Property Name="FIRM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIRM_NAME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="FIRM_FILE_NO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FIRM_GST" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FIRM_PROPRITER" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FIRM_ADDRESS" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Gadget_Details">
+    <Key>
+      <PropertyRef Name="Sr_No" />
+    </Key>
+    <Property Name="Sr_No" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VisitorName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VisitorID" Type="Int32" />
+    <Property Name="GadgetName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Gadget_SerialNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Contact_No" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Nationality" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="From_Time" Type="Time" />
+    <Property Name="To_Time" Type="Time" />
+    <Property Name="EDate" Type="DateTime" />
+    <Property Name="Purpose" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Unit_Address" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Tele_Ext" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Ofcr_Tran_Id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="GENDER_MASTER">
+    <Key>
+      <PropertyRef Name="G_ID" />
+    </Key>
+    <Property Name="G_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="G_NAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="HostMaster">
+    <Key>
+      <PropertyRef Name="HostId" />
+    </Key>
+    <Property Name="HostId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HostName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Hostphoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DepartmentId" Type="Int32" />
+    <Property Name="designation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="HostCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Pincode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="createdon" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="DepartmentMaster" Relationship="VMSModel.FK_HostMaster_DepartmentMaster" FromRole="HostMaster" ToRole="DepartmentMaster" />
+  </EntityType>
+  <EntityType Name="LabourTransaction">
+    <Key>
+      <PropertyRef Name="ContractorTranId" />
+    </Key>
+    <Property Name="ContractorTranId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractorName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ContractorFirm" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ContractorCardNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContractorPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfIssue" Type="DateTime" />
+    <Property Name="Height" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdentificationMark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ColorOfEye" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="ColorOfHair" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" />
+    <Property Name="BloodGroup" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Religion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NativePlace" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NOK" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Relation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PVCDate" Type="DateTime" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EscortType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfExpire" Type="DateTime" />
+    <Property Name="PTMAddVillage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddTaluke" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPoliceStn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddDist" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPin" Type="Int32" />
+    <Property Name="PMTAddTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PRAddVillage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddTaluka" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPoliceStn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddDist" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPin" Type="Int32" />
+    <Property Name="PRAddTel" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="FirmName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FirmAddress" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FirmProprietor" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmValidity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmWorkOrderNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmWorkSite" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmSponsor" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmRegNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmNatureOfWork" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RecordOfMisconduct" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserCreateDate" Type="DateTime" />
+    <Property Name="RecommandedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DocType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DocNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UIDNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SEX" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="FileNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NATIONALITY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmID" Type="Int32" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="Center_No" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Officer_Transaction">
+    <Key>
+      <PropertyRef Name="Ofcr_Tran_Id" />
+    </Key>
+    <Property Name="Ofcr_Tran_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="V_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_PassNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_Age" Type="Int32" />
+    <Property Name="V_Sex" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="V_ContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_Nationality" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_Firm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_FromTime" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_ToTime" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_Purpose" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="V_Date" Type="DateTime" />
+    <Property Name="ES_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_Rank" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_TokenNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_CardNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_Dept" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Center_No" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Officer_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Officer_Designation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_Status" Type="Int32" />
+    <Property Name="V_Dept" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Approved_By" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Emp_Type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Recommand_By" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="GroupID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_ID_TYPE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_ID_NO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Print_status" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_FIRM_TIN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DURATION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OFCR_TOKEN" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OFCR_DEPT" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Print_Date" Type="DateTime" />
+    <Property Name="FileID" Type="Int32" />
+    <Property Name="ES_MobNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="OfficerMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Officer_Token" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Officer_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Officer_Designation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Officer_Dept" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PASSTYPE_MASTER">
+    <Key>
+      <PropertyRef Name="PASSTYPE_ID" />
+    </Key>
+    <Property Name="PASSTYPE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PASSTYPE_NAME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="PSU_MASTER">
+    <Key>
+      <PropertyRef Name="PSU_ID" />
+    </Key>
+    <Property Name="PSU_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PSU_NAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PSU_FIRMFILENO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="RELIGION_MASTER">
+    <Key>
+      <PropertyRef Name="R_ID" />
+    </Key>
+    <Property Name="R_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="R_NAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="role_master">
+    <Key>
+      <PropertyRef Name="roletypeid" />
+    </Key>
+    <Property Name="roletypeid" Type="Int32" Nullable="false" />
+    <Property Name="rolename" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ROLEMASTER">
+    <Key>
+      <PropertyRef Name="ROLEID" />
+    </Key>
+    <Property Name="ROLEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ROLENAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="SHOP_MASTER">
+    <Key>
+      <PropertyRef Name="SHOP_ID" />
+    </Key>
+    <Property Name="SHOP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SHOP_NAME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="FILENO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="STATE_MASTER">
+    <Key>
+      <PropertyRef Name="STATE_ID" />
+    </Key>
+    <Property Name="STATE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STATE_NAME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FLAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="TEMP_GV">
+    <Key>
+      <PropertyRef Name="SL" />
+    </Key>
+    <Property Name="SL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="NAME" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="NUMBER" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="PURPOSE" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TEMP_V_ID" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TempCasualVisitor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Passno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Vname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Age" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Nationality" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirmName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="InTime" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OutTime" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Purpose" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="LoginId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EMP_Type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ID_TYPE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ID_NUMBER" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="V_FIRM_TIN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DURATION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VechicleDetail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VehicleName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VehicleNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Vehicle_Purpose" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Vehicle_Remarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="GadgetDetail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="GadgetName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Gadget_SerialNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Gadget_Purpose" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Gadget_Remarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TempLabourList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Pass_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="ValidUpto" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LabouRequaired" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="LoginId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TemporaryDetail">
+    <Key>
+      <PropertyRef Name="TemporaryTranId" />
+    </Key>
+    <Property Name="TemporaryTranId" Type="Int32" Nullable="false" />
+    <Property Name="TemporaryName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfIssue" Type="DateTime" />
+    <Property Name="TemporaryPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Department" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CardNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AppointmentNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FromDate" Type="DateTime" />
+    <Property Name="ToDate" Type="DateTime" />
+    <Property Name="Height" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ColorOfEye" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ColorOfHair" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EscortType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdentificationMark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="DateOfBirth" Type="DateTime" />
+    <Property Name="BloodGroup" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ExpireDate" Type="DateTime" />
+    <Property Name="Religion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NativePlace" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PVCDate" Type="DateTime" />
+    <Property Name="NOK" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Relation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PTMAddVillage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddTaluke" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPoliceStn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddDist" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PMTAddPin" Type="Int32" />
+    <Property Name="PMTAddTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PRAddVillage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddTaluka" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPoliceStn" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddDist" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PRAddPin" Type="Int32" />
+    <Property Name="PRAddTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SponsorName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="SponsorContactNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SponsorDept" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SponsorRelation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SponsorCNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SponsorDesignation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SponsorTNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RecordOfMisconduct" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserCreateDate" Type="DateTime" />
+    <Property Name="UIDNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="USER_MASTER">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="EMPTOKEN" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ROLETYPEID" Type="Int32" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ISACTIVE" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="MENUID" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="APPLICATIONRIGHTS" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DEPARTMENTID" Type="Int32" Nullable="false" />
+    <Property Name="DEPARTMENTNAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CREATEDBY" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CREATIONDATE" Type="DateTime" />
+    <Property Name="UPDATEDATE" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="usermaster">
+    <Key>
+      <PropertyRef Name="usertranid" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="Empcode" />
+    </Key>
+    <Property Name="usertranid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="password" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Empcode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mobileno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="emailid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="roletypeid" Type="Int32" />
+    <Property Name="isactive" Type="Boolean" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="Cen_No" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Dept" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Dept_ID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="VehicleDetail">
+    <Key>
+      <PropertyRef Name="SrNo" />
+    </Key>
+    <Property Name="SrNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VehicleName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VehicleNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Purpose" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EDate" Type="DateTime" />
+    <Property Name="FirmName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VisitorID" Type="Int32" />
+    <Property Name="Ofcr_Tran_Id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VisitorLogDetail">
+    <Key>
+      <PropertyRef Name="SerialNo" />
+    </Key>
+    <Property Name="SerialNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VisitorTranID" Type="Int32" Nullable="false" />
+    <Property Name="VisitorName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="CardNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Designation" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="VehicleNumber" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Oragantization" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PassType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="FromDate" Type="DateTime" />
+    <Property Name="ToDate" Type="DateTime" />
+    <Property Name="TimeIn" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TimeOut" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="VisitiorPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DepartmentId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="HostID" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeMobile" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserCreateDate" Type="DateTime" />
+    <Property Name="numberOfPerson" Type="Int32" />
+    <Property Name="PassNumber" Type="String" MaxLength="11" Unicode="false" FixedLength="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DeviceName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SerialNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VehicleName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VehicleNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="barcodeID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BarcodeIN" Type="DateTime" />
+    <Property Name="BarcodeOUT" Type="DateTime" />
+    <Property Name="ID_Type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ID_No" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="VisitorTransactionDetail">
+    <Key>
+      <PropertyRef Name="VisitorTranID" />
+    </Key>
+    <Property Name="VisitorTranID" Type="Int32" Nullable="false" />
+    <Property Name="VisitorName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="CardNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Designation" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="VehicleNumber" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Oragantization" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PassType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="FromDate" Type="DateTime" />
+    <Property Name="ToDate" Type="DateTime" />
+    <Property Name="TimeIn" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TimeOut" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="VisitiorPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DepartmentId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="HostID" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeMobile" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserCreateDate" Type="DateTime" />
+    <Property Name="numberOfPerson" Type="Int32" />
+    <Property Name="PassNumber" Type="String" MaxLength="11" Unicode="false" FixedLength="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="DOB" Type="DateTime" />
+    <Property Name="Nationality" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Sex" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="EmpType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="File_Upload" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="Firm_Tin_No" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="V_Purpose" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="ES_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_Rank" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_TokenNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_CardNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ES_Dept" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Officer_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Officer_Designation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DURATION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OFCR_TOKEN" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OFCR_DEPT" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AADHAR_CARD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AADHAR_DATA" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PAN_CARD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PAN_CARD_DATA" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PASSPORT" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PASSPORT_DATA" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DRIVING_LICENCE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DL_DATA" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ID_No" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ID_Type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_APPLICATION_FORM_CONTRACTOR_DETAIL">
+    <End Role="CONTRACTOR_DETAIL" Type="VMSModel.CONTRACTOR_DETAIL" Multiplicity="1" />
+    <End Role="APPLICATION_FORM" Type="VMSModel.APPLICATION_FORM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRACTOR_DETAIL">
+        <PropertyRef Name="Cont_Id" />
+      </Principal>
+      <Dependent Role="APPLICATION_FORM">
+        <PropertyRef Name="CONT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HostMaster_DepartmentMaster">
+    <End Role="DepartmentMaster" Type="VMSModel.DepartmentMaster" Multiplicity="0..1" />
+    <End Role="HostMaster" Type="VMSModel.HostMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepartmentMaster">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="HostMaster">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

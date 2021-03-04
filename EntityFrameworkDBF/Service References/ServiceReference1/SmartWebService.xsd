@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SmartServiceModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SmartServiceModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CardDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ControllerNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Expiry" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoOfReader" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardDetails" nillable="true" type="tns:CardDetails" />
+  <xs:complexType name="CardStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="tns:Card_Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardStatus" nillable="true" type="tns:CardStatus" />
+  <xs:simpleType name="Card_Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CardActivated" />
+      <xs:enumeration value="FailedToActivateCard" />
+      <xs:enumeration value="CardDeactivated" />
+      <xs:enumeration value="FailedToDeactivateCard" />
+      <xs:enumeration value="ValidationError" />
+      <xs:enumeration value="Exception" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Card_Status" nillable="true" type="tns:Card_Status" />
+  <xs:complexType name="ArrayOfTemplateStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TemplateStatus" nillable="true" type="tns:TemplateStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTemplateStatus" nillable="true" type="tns:ArrayOfTemplateStatus" />
+  <xs:complexType name="TemplateStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="tns:Template_Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TemplateStatus" nillable="true" type="tns:TemplateStatus" />
+  <xs:simpleType name="Template_Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TemplateDownloaded" />
+      <xs:enumeration value="FailedToDownloadTemplate" />
+      <xs:enumeration value="TemplateUploaded" />
+      <xs:enumeration value="FailedToUploadTemplate" />
+      <xs:enumeration value="TemplateNotFound" />
+      <xs:enumeration value="CardNotActivated" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Template_Status" nillable="true" type="tns:Template_Status" />
+  <xs:complexType name="ArrayOfDeviceActivateCardClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeviceActivateCardClass" nillable="true" type="tns:DeviceActivateCardClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeviceActivateCardClass" nillable="true" type="tns:ArrayOfDeviceActivateCardClass" />
+  <xs:complexType name="DeviceActivateCardClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivateStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ControllerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Expiry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceActivateCardClass" nillable="true" type="tns:DeviceActivateCardClass" />
+  <xs:simpleType name="Enroll_Error_Code">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Finger_Found_Code_98" />
+      <xs:enumeration value="Finger_Not_Found_Code_105" />
+      <xs:enumeration value="Finger_Id_Exists_110" />
+      <xs:enumeration value="Finger_Not_Match_Code_106" />
+      <xs:enumeration value="Communication_Time_Out_Code_241" />
+      <xs:enumeration value="Finger_Scan_Fail_Code_99" />
+      <xs:enumeration value="Please_Try_Again_Code_107" />
+      <xs:enumeration value="Finger_Time_Out_108" />
+      <xs:enumeration value="Invalid_ID__Code_118" />
+      <xs:enumeration value="Bio_Cancelled_Code_129" />
+      <xs:enumeration value="Duress_Finger_Code_145" />
+      <xs:enumeration value="Finger_Match_Timeout_Code_122" />
+      <xs:enumeration value="Bio_Continue_Code_116" />
+      <xs:enumeration value="User_Enrolled_Successfully_Code_97" />
+      <xs:enumeration value="Memory_Full_Code_109" />
+      <xs:enumeration value="Finger_Limit_Reached_Code_114" />
+      <xs:enumeration value="Device_Busy_Code_128" />
+      <xs:enumeration value="Finger_Exists_Code_134" />
+      <xs:enumeration value="Bio_Timeout_Code_156" />
+      <xs:enumeration value="No_Finger_Space_Code_117" />
+      <xs:enumeration value="Undefined_Code_108" />
+      <xs:enumeration value="Error_Command_e_000" />
+      <xs:enumeration value="Success_Command_Code_001" />
+      <xs:enumeration value="Socket_Timed_out" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enroll_Error_Code" nillable="true" type="tns:Enroll_Error_Code" />
+  <xs:complexType name="ArrayOfTransactionTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransactionTable" nillable="true" type="tns:TransactionTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransactionTable" nillable="true" type="tns:ArrayOfTransactionTable" />
+  <xs:complexType name="TransactionTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ControllerID" type="xs:int" />
+      <xs:element minOccurs="0" name="EmployeeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeFunctionCardID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventMsgName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IOEntryStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReadPointer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReaderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReaderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionCount" type="xs:int" />
+      <xs:element minOccurs="0" name="aDateTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionTable" nillable="true" type="tns:TransactionTable" />
+</xs:schema>

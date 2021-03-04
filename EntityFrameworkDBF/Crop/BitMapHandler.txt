@@ -1,0 +1,171 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Runtime.InteropServices;
+
+
+namespace ImageHandler
+{
+    public static class BitMapHandler
+    {
+
+        public static Bitmap AdjustBrightness(Bitmap Image, int Value)
+        {
+
+            Bitmap TempBitmap = Image;
+
+            Bitmap NewBitmap = new Bitmap(TempBitmap.Width, TempBitmap.Height);
+
+            Graphics NewGraphics = Graphics.FromImage(NewBitmap);
+
+            float FinalValue = (float)Value / 255.0f;
+
+            float[][] FloatColorMatrix ={
+
+                     new float[] {1, 0, 0, 0, 0},
+
+                     new float[] {0, 1, 0, 0, 0},
+
+                     new float[] {0, 0, 1, 0, 0},
+
+                     new float[] {0, 0, 0, 1, 0},
+
+                     new float[] {FinalValue, FinalValue, FinalValue, 1, 1}
+                 };
+
+            ColorMatrix NewColorMatrix = new ColorMatrix(FloatColorMatrix);
+
+            ImageAttributes Attributes = new ImageAttributes();
+
+            Attributes.SetColorMatrix(NewColorMatrix);
+
+            NewGraphics.DrawImage(TempBitmap, new Rectangle(0, 0, TempBitmap.Width, TempBitmap.Height), 0, 0, TempBitmap.Width, TempBitmap.Height, GraphicsUnit.Pixel, Attributes);
+
+            Attributes.Dispose();
+
+            NewGraphics.Dispose();
+
+            return NewBitmap;
+        }
+
+
+        public static Bitmap AdjustGamma(Bitmap Image, double red, double green, double blue)
+        {
+            Bitmap temp = Image;
+            Bitmap bmap = (Bitmap)temp.Clone();
+            Color c;
+            byte[] redGamma = CreateGammaArray(red);
+            byte[] greenGamma = CreateGammaArray(green);
+            byte[] blueGamma = CreateGammaArray(blue);
+            for (int i = 0; i < bmap.Width; i++)
+            {
+                for (int j = 0; j < bmap.Height; j++)
+                {
+                    c = bmap.GetPixel(i, j);
+                    bmap.SetPixel(i, j, Color.FromArgb(redGamma[c.R],
+                       greenGamma[c.G], blueGamma[c.B]));
+                }
+            }
+            temp = (Bitmap)bmap.Clone();
+
+            return temp;
+        }
+
+
+
+        private static byte[] CreateGammaArray(double color)
+        {
+            byte[] gammaArray = new byte[256];
+            for (int i = 0; i < 256; ++i)
+            {
+                gammaArray[i] = (byte)Math.Min(255, (int)((255.0 * Math.Pow(i / 255.0, 1.0 / color)) + 0.5));
+            }
+            return gammaArray;
+        }
+
+
+        public static Bitmap SetColorFilter(Bitmap Image, ColorFilterTypes colorFilterType)
+        {
+            Bitmap temp = (Bitmap)Image;
+            Bitmap bmap = (Bitmap)temp.Clone();
+            Color c;
+            for (int i = 0; i < bmap.Width; i++)
+            {
+                for (int j = 0; j < bmap.Height; j++)
+                {
+                    c = bmap.GetPixel(i, j);
+                    int nPixelR = 0;
+                    int nPixelG = 0;
+                    int nPixelB = 0;
+                    if (colorFilterType == ColorFilterTypes.Red)
+                    {
+                        nPixelR = c.R;
+                        nPixelG = c.G - 255;
+                        nPixelB = c.B - 255;
+                    }
+                    else if (colorFilterType == ColorFilterTypes.Green)
+                    {
+                        nPixelR = c.R - 255;
+                        nPixelG = c.G;
+                        nPixelB = c.B - 255;
+                    }
+                    else if (colorFilterType == ColorFilterTypes.Blue)
+                    {
+                        nPixelR = c.R - 255;
+                        nPixelG = c.G - 255;
+                        nPixelB = c.B;
+                    }
+
+                    nPixelR = Math.Max(nPixelR, 0);
+                    nPixelR = Math.Min(255, nPixelR);
+
+                    nPixelG = Math.Max(nPixelG, 0);
+                    nPixelG = Math.Min(255, nPixelG);
+
+                    nPixelB = Math.Max(nPixelB, 0);
+                    nPixelB = Math.Min(255, nPixelB);
+
+                    bmap.SetPixel(i, j, Color.FromArgb((byte)nPixelR, (byte)nPixelG, (byte)nPixelB));
+                }
+            }
+            return bmap;
+        }
+
+
+        private static Bitmap AdjustGamma(Bitmap Image, float gamma)
+        {
+            Image image = Image;
+            // Set the ImageAttributes object's gamma value.
+            ImageAttributes attributes = new ImageAttributes();
+            attributes.SetGamma(gamma);
+
+            // Draw the image onto the new bitmap
+            // while applying the new gamma value.
+            Point[] points =
+            {
+                new Point(0, 0),
+                new Point(image.Width, 0),
+                new Point(0, image.Height),
+            };
+            Rectangle rect = new Rectangle(0, 0, image.Width, image.Height);
+
+            // Make the result bitmap.
+            Bitmap bm = new Bitmap(image.Width, image.Height);
+            using (Graphics gr = Graphics.FromImage(bm))
+            {
+                gr.DrawImage(image, points, rect,
+                    GraphicsUnit.Pixel, attributes);
+            }
+
+            // Return the result.
+            return bm;
+        }
+      
+
+
+    }
+}

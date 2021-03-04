@@ -1,0 +1,125 @@
+<Schema Namespace="SmartAccessModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="SmartAccessModelStoreContainer">
+    <EntitySet Name="Controllers" EntityType="SmartAccessModel.Store.Controllers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DeviceTemplates" EntityType="SmartAccessModel.Store.DeviceTemplates" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Transactions" EntityType="SmartAccessModel.Store.Transactions" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Transactions_Controllers" Association="SmartAccessModel.Store.FK_Transactions_Controllers">
+      <End Role="Controllers" EntitySet="Controllers" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Controllers">
+    <Key>
+      <PropertyRef Name="ControllerID" />
+    </Key>
+    <Property Name="ControllerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ControllerNo" Type="int" Nullable="false" />
+    <Property Name="ControllerName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SlaveID" Type="int" Nullable="false" />
+    <Property Name="CompanyLocationID" Type="int" Nullable="false" />
+    <Property Name="ControllerAuthenticationTypeID" Type="int" Nullable="false" />
+    <Property Name="CommunicationTypeID" Type="int" Nullable="false" />
+    <Property Name="IPAddress" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PortNo" Type="int" Nullable="false" />
+    <Property Name="NoOfReaders" Type="int" Nullable="false" />
+    <Property Name="ResponseTimeMultiplier" Type="varchar" MaxLength="50" />
+    <Property Name="ModelMasterID" Type="int" Nullable="false" />
+    <Property Name="SwipeFrequencyTime" Type="int" />
+    <Property Name="ServerIP" Type="varchar" MaxLength="50" />
+    <Property Name="ServerIPStatus" Type="bit" Nullable="false" />
+    <Property Name="APBStatus" Type="bit" Nullable="false" />
+    <Property Name="APBType" Type="varchar" MaxLength="50" />
+    <Property Name="DNS" Type="varchar" MaxLength="50" />
+    <Property Name="MailServerName" Type="varchar" MaxLength="50" />
+    <Property Name="AuthEmailID" Type="varchar" MaxLength="50" />
+    <Property Name="EmailPassword" Type="varchar" MaxLength="50" />
+    <Property Name="MailStatus" Type="bit" Nullable="false" />
+    <Property Name="ReaderCombination" Type="varchar" MaxLength="50" />
+    <Property Name="Netmask" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Gateway" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ControllerTypeID" Type="int" Nullable="false" />
+    <Property Name="CreatedDateTime" Type="datetime" Nullable="false" />
+    <Property Name="MarkDeleted" Type="bit" Nullable="false" />
+    <Property Name="DefaultGateway" Type="varchar" MaxLength="50" />
+    <Property Name="SerialNo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MACAddress" Type="varchar" MaxLength="50" />
+    <Property Name="DeviceIP" Type="varchar" MaxLength="50" />
+    <Property Name="DevicePortNo" Type="int" Nullable="false" />
+    <Property Name="IsMac" Type="bit" Nullable="false" />
+    <Property Name="IsEnrolment" Type="bit" Nullable="false" />
+    <Property Name="ModelTypeID" Type="int" />
+    <Property Name="BioEnrollType" Type="varchar" MaxLength="50" />
+    <Property Name="ControllerCommunicationTypeID" Type="int" />
+    <Property Name="DynaDNS" Type="varchar" MaxLength="25" />
+    <Property Name="ResetAPBStatus" Type="nvarchar" MaxLength="10" />
+    <Property Name="ProcessStr" Type="nvarchar" MaxLength="250" />
+    <Property Name="LastUpdateTime" Type="varchar" MaxLength="50" />
+    <Property Name="Remote_Host" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsTransactionDownload" Type="bit" Nullable="false" />
+    <Property Name="PINStatus" Type="bit" Nullable="false" />
+    <Property Name="FacilityCode" Type="bit" Nullable="false" />
+    <Property Name="LastTrn_TM" Type="datetime" />
+    <Property Name="LastHB_TM" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DeviceTemplates">
+    <Key>
+      <PropertyRef Name="DeviceTemplateID" />
+    </Key>
+    <Property Name="DeviceTemplateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="CardNo" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="TemplateNo" Type="varchar" MaxLength="15" />
+    <Property Name="TemplateData" Type="varchar" MaxLength="1000" />
+    <Property Name="TemplateSize" Type="varchar" MaxLength="50" />
+    <Property Name="ControllerID" Type="int" Nullable="false" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="SynchTime" Type="datetime" Nullable="false" />
+    <Property Name="TemplateSource" Type="varchar" MaxLength="50" />
+    <Property Name="SynchStatus" Type="varchar" MaxLength="15" />
+    <Property Name="TemplateType" Type="varchar" MaxLength="100" />
+    <Property Name="TryCount" Type="int" Nullable="false" />
+    <Property Name="MarkDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Transactions">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ControllerID" Type="int" Nullable="false" />
+    <Property Name="CardNo" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="CSNNo" Type="varchar" MaxLength="30" />
+    <Property Name="EmployeeFunctionCardID" Type="int" />
+    <Property Name="ReaderID" Type="int" />
+    <Property Name="EventCode" Type="int" Nullable="false" />
+    <Property Name="aDateTime" Type="datetime" Nullable="false" />
+    <Property Name="TransactionCount" Type="int" />
+    <Property Name="ReadPointer" Type="int" />
+    <Property Name="FacilityCode" Type="int" Nullable="false" />
+    <Property Name="PCIPAddress" Type="varchar" MaxLength="40" />
+    <Property Name="EventMessageName" Type="varchar" MaxLength="50" />
+    <Property Name="TranSendsServiceID" Type="int" />
+    <Property Name="ChannelNo" Type="int" />
+    <Property Name="INOUTDate" Type="datetime" />
+    <Property Name="INOUT" Type="tinyint" />
+    <Property Name="IOCOUNT" Type="smallint" />
+    <Property Name="INOUT_R2" Type="tinyint" />
+    <Property Name="IOCOUNT_R2" Type="smallint" />
+    <Property Name="ControllerCompanyLocationID" Type="int" />
+    <Property Name="EmployeemasterID" Type="bigint" />
+    <Property Name="INOUTDATE_R2" Type="datetime" />
+    <Property Name="CanteenMenuCode" Type="int" />
+    <Property Name="CanteenMenuCodeID" Type="int" />
+  </EntityType>
+  <Association Name="FK_Transactions_Controllers">
+    <End Role="Controllers" Type="SmartAccessModel.Store.Controllers" Multiplicity="1" />
+    <End Role="Transactions" Type="SmartAccessModel.Store.Transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Controllers">
+        <PropertyRef Name="ControllerID" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="ControllerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

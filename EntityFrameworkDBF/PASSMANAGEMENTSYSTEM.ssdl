@@ -1,0 +1,349 @@
+<Schema Namespace="PASS_MANAGEMENT_SYSTEMModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PASS_MANAGEMENT_SYSTEMModelStoreContainer">
+    <EntitySet Name="APPLICATION_FORM" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.APPLICATION_FORM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CANCEL_LOG" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.CANCEL_LOG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CANCEL_REASON_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.CANCEL_REASON_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CONTRACTOR_DETAIL" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.CONTRACTOR_DETAIL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COUNTRY_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.COUNTRY_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DESIGNATION_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.DESIGNATION_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DOCUMENT_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.DOCUMENT_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FIRM_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.FIRM_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GENDER_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.GENDER_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PASSTYPE_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.PASSTYPE_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PSU_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.PSU_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RELIGION_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.RELIGION_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ROLEMASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.ROLEMASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SHOP_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.SHOP_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="STATE_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.STATE_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="USER_MASTER" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.USER_MASTER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VisitorTransactionDetail" EntityType="PASS_MANAGEMENT_SYSTEMModel.Store.VisitorTransactionDetail" store:Type="Tables" store:Schema="dbo" store:Name="VisitorTransactionDetail">
+      <DefiningQuery>SELECT 
+      [VisitorTransactionDetail].[VisitorTranID] AS [VisitorTranID], 
+      [VisitorTransactionDetail].[VisitorName] AS [VisitorName], 
+      [VisitorTransactionDetail].[CardNumber] AS [CardNumber], 
+      [VisitorTransactionDetail].[Designation] AS [Designation], 
+      [VisitorTransactionDetail].[VehicleNumber] AS [VehicleNumber], 
+      [VisitorTransactionDetail].[Oragantization] AS [Oragantization], 
+      [VisitorTransactionDetail].[MobileNumber] AS [MobileNumber], 
+      [VisitorTransactionDetail].[PassType] AS [PassType], 
+      [VisitorTransactionDetail].[Address] AS [Address], 
+      [VisitorTransactionDetail].[FromDate] AS [FromDate], 
+      [VisitorTransactionDetail].[ToDate] AS [ToDate], 
+      [VisitorTransactionDetail].[TimeIn] AS [TimeIn], 
+      [VisitorTransactionDetail].[TimeOut] AS [TimeOut], 
+      [VisitorTransactionDetail].[VisitiorPhoto] AS [VisitiorPhoto], 
+      [VisitorTransactionDetail].[DepartmentId] AS [DepartmentId], 
+      [VisitorTransactionDetail].[HostID] AS [HostID], 
+      [VisitorTransactionDetail].[EmployeeCode] AS [EmployeeCode], 
+      [VisitorTransactionDetail].[EmployeeName] AS [EmployeeName], 
+      [VisitorTransactionDetail].[EmployeeMobile] AS [EmployeeMobile], 
+      [VisitorTransactionDetail].[UserId] AS [UserId], 
+      [VisitorTransactionDetail].[UserCreateDate] AS [UserCreateDate], 
+      [VisitorTransactionDetail].[numberOfPerson] AS [numberOfPerson], 
+      [VisitorTransactionDetail].[PassNumber] AS [PassNumber], 
+      [VisitorTransactionDetail].[Age] AS [Age], 
+      [VisitorTransactionDetail].[DOB] AS [DOB], 
+      [VisitorTransactionDetail].[Nationality] AS [Nationality], 
+      [VisitorTransactionDetail].[Sex] AS [Sex], 
+      [VisitorTransactionDetail].[Status] AS [Status], 
+      [VisitorTransactionDetail].[EmpType] AS [EmpType], 
+      [VisitorTransactionDetail].[File_Upload] AS [File_Upload], 
+      [VisitorTransactionDetail].[Firm_Tin_No] AS [Firm_Tin_No], 
+      [VisitorTransactionDetail].[V_Purpose] AS [V_Purpose], 
+      [VisitorTransactionDetail].[ES_Name] AS [ES_Name], 
+      [VisitorTransactionDetail].[ES_Rank] AS [ES_Rank], 
+      [VisitorTransactionDetail].[ES_TokenNo] AS [ES_TokenNo], 
+      [VisitorTransactionDetail].[ES_CardNo] AS [ES_CardNo], 
+      [VisitorTransactionDetail].[ES_Dept] AS [ES_Dept], 
+      [VisitorTransactionDetail].[Officer_Name] AS [Officer_Name], 
+      [VisitorTransactionDetail].[Officer_Designation] AS [Officer_Designation], 
+      [VisitorTransactionDetail].[DURATION] AS [DURATION], 
+      [VisitorTransactionDetail].[OFCR_TOKEN] AS [OFCR_TOKEN], 
+      [VisitorTransactionDetail].[OFCR_DEPT] AS [OFCR_DEPT], 
+      [VisitorTransactionDetail].[AADHAR_CARD] AS [AADHAR_CARD], 
+      [VisitorTransactionDetail].[AADHAR_DATA] AS [AADHAR_DATA], 
+      [VisitorTransactionDetail].[PAN_CARD] AS [PAN_CARD], 
+      [VisitorTransactionDetail].[PAN_CARD_DATA] AS [PAN_CARD_DATA], 
+      [VisitorTransactionDetail].[PASSPORT] AS [PASSPORT], 
+      [VisitorTransactionDetail].[PASSPORT_DATA] AS [PASSPORT_DATA], 
+      [VisitorTransactionDetail].[DRIVING_LICENCE] AS [DRIVING_LICENCE], 
+      [VisitorTransactionDetail].[DL_DATA] AS [DL_DATA], 
+      [VisitorTransactionDetail].[ID_No] AS [ID_No], 
+      [VisitorTransactionDetail].[ID_Type] AS [ID_Type]
+      FROM [dbo].[VisitorTransactionDetail] AS [VisitorTransactionDetail]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_APPLICATION_FORM_CONTRACTOR_DETAIL" Association="PASS_MANAGEMENT_SYSTEMModel.Store.FK_APPLICATION_FORM_CONTRACTOR_DETAIL">
+      <End Role="CONTRACTOR_DETAIL" EntitySet="CONTRACTOR_DETAIL" />
+      <End Role="APPLICATION_FORM" EntitySet="APPLICATION_FORM" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="APPLICATION_FORM">
+    <Key>
+      <PropertyRef Name="APP_ID" />
+    </Key>
+    <Property Name="APP_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="APP_NUMBER" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CONT_ID" Type="int" Nullable="false" />
+    <Property Name="DELETE_FLAG" Type="varchar" MaxLength="10" />
+    <Property Name="APP_FORM" Type="image" Nullable="false" />
+    <Property Name="APP_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CANCEL_LOG">
+    <Key>
+      <PropertyRef Name="Cancel_Id" />
+    </Key>
+    <Property Name="Cancel_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cancel_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Cancel_Firm" Type="int" />
+    <Property Name="Cancel_PassNo" Type="varchar(max)" />
+    <Property Name="Cancel_Cr" Type="varchar(max)" />
+    <Property Name="Cancel_PlaceLoss" Type="varchar(max)" />
+    <Property Name="Cancel_Fine" Type="varchar(max)" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Loss_Date" Type="datetime" />
+    <Property Name="Loss_Fir" Type="varchar(max)" />
+    <Property Name="Dockyard_id" Type="int" />
+  </EntityType>
+  <EntityType Name="CANCEL_REASON_MASTER">
+    <Key>
+      <PropertyRef Name="CR_ID" />
+    </Key>
+    <Property Name="CR_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CR_NAME" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CONTRACTOR_DETAIL">
+    <Key>
+      <PropertyRef Name="Cont_Id" />
+    </Key>
+    <Property Name="Cont_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cont_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_DOB" Type="date" />
+    <Property Name="Cont_Aadhaar" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_Photo" Type="image" />
+    <Property Name="Cont_FirmFileNo" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_FirmID" Type="int" Nullable="false" />
+    <Property Name="Cont_FirmWO" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_WOValidity" Type="date" />
+    <Property Name="Cont_Unit" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_PmtAddress" Type="varchar" MaxLength="150" />
+    <Property Name="Cont_StateID" Type="int" Nullable="false" />
+    <Property Name="Cont_NationalityID" Type="int" Nullable="false" />
+    <Property Name="Cont_AppNo" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_AppPhoto" Type="image" />
+    <Property Name="Cont_PVCNO" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_PVCValidity" Type="date" />
+    <Property Name="Cont_RFIDNo" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_RFIDValidity" Type="date" />
+    <Property Name="Cont_FingerPrint" Type="image" />
+    <Property Name="Cont_CardNo" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_Delete_Flag" Type="char" MaxLength="10" />
+    <Property Name="Cont_DesignationID" Type="int" Nullable="false" />
+    <Property Name="Cont_ReligionID" Type="int" Nullable="false" />
+    <Property Name="Cont_Gender" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_Pin" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_Taluka" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_District" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_IssueDate" Type="date" />
+    <Property Name="Cont_CreatedDate" Type="date" />
+    <Property Name="Cont_CancelFLag" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_CancelReason" Type="int" Nullable="false" />
+    <Property Name="Cont_PassType" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_DateOFLoss" Type="datetime" />
+    <Property Name="Cont_PlaceOfLoss" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_Fine" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_Fir" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_CancelDate" Type="datetime" />
+    <Property Name="Cont_BlackList" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_IcardrNo" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_PSUunitID" Type="int" />
+    <Property Name="Cont_UnitEmp" Type="varchar" MaxLength="50" />
+    <Property Name="Cont_DocID" Type="int" />
+  </EntityType>
+  <EntityType Name="COUNTRY_MASTER">
+    <Key>
+      <PropertyRef Name="COUNTRY_ID" />
+    </Key>
+    <Property Name="COUNTRY_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="COUNTRY_NAME" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+    <Property Name="NATIONALITY" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DESIGNATION_MASTER">
+    <Key>
+      <PropertyRef Name="DESIGNATION_ID" />
+    </Key>
+    <Property Name="DESIGNATION_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DESIGNATION_NAME" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DOCUMENT_MASTER">
+    <Key>
+      <PropertyRef Name="DOCUMENT_ID" />
+    </Key>
+    <Property Name="DOCUMENT_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DOCUMENT_NAME" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="FIRM_MASTER">
+    <Key>
+      <PropertyRef Name="FIRM_ID" />
+    </Key>
+    <Property Name="FIRM_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FIRM_NAME" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+    <Property Name="FIRM_FILE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="FIRM_GST" Type="varchar" MaxLength="50" />
+    <Property Name="FIRM_PROPRITER" Type="varchar" MaxLength="100" />
+    <Property Name="FIRM_ADDRESS" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="GENDER_MASTER">
+    <Key>
+      <PropertyRef Name="G_ID" />
+    </Key>
+    <Property Name="G_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="G_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="PASSTYPE_MASTER">
+    <Key>
+      <PropertyRef Name="PASSTYPE_ID" />
+    </Key>
+    <Property Name="PASSTYPE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PASSTYPE_NAME" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="PSU_MASTER">
+    <Key>
+      <PropertyRef Name="PSU_ID" />
+    </Key>
+    <Property Name="PSU_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PSU_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="FLAG" Type="varchar" MaxLength="50" />
+    <Property Name="PSU_FIRMFILENO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RELIGION_MASTER">
+    <Key>
+      <PropertyRef Name="R_ID" />
+    </Key>
+    <Property Name="R_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="R_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ROLEMASTER">
+    <Key>
+      <PropertyRef Name="ROLEID" />
+    </Key>
+    <Property Name="ROLEID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ROLENAME" Type="varchar" MaxLength="50" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="SHOP_MASTER">
+    <Key>
+      <PropertyRef Name="SHOP_ID" />
+    </Key>
+    <Property Name="SHOP_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SHOP_NAME" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="STATE_MASTER">
+    <Key>
+      <PropertyRef Name="STATE_ID" />
+    </Key>
+    <Property Name="STATE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="STATE_NAME" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FLAG" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="USER_MASTER">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="100" />
+    <Property Name="EMPTOKEN" Type="varchar" MaxLength="100" />
+    <Property Name="ROLETYPEID" Type="int" Nullable="false" />
+    <Property Name="STATUS" Type="char" MaxLength="1" />
+    <Property Name="ISACTIVE" Type="char" MaxLength="1" />
+    <Property Name="MENUID" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="APPLICATIONRIGHTS" Type="varchar" MaxLength="100" />
+    <Property Name="DEPARTMENTID" Type="int" Nullable="false" />
+    <Property Name="DEPARTMENTNAME" Type="varchar" MaxLength="100" />
+    <Property Name="CREATEDBY" Type="varchar" MaxLength="100" />
+    <Property Name="CREATIONDATE" Type="datetime" />
+    <Property Name="UPDATEDATE" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'PASS_MANAGEMENT_SYSTEM.dbo.VisitorTransactionDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VisitorTransactionDetail">
+    <Key>
+      <PropertyRef Name="VisitorTranID" />
+    </Key>
+    <Property Name="VisitorTranID" Type="int" Nullable="false" />
+    <Property Name="VisitorName" Type="varchar" MaxLength="150" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="20" />
+    <Property Name="Designation" Type="varchar" MaxLength="30" />
+    <Property Name="VehicleNumber" Type="varchar" MaxLength="30" />
+    <Property Name="Oragantization" Type="varchar" MaxLength="100" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="50" />
+    <Property Name="PassType" Type="varchar" MaxLength="20" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="TimeIn" Type="varchar" MaxLength="20" />
+    <Property Name="TimeOut" Type="varchar" MaxLength="20" />
+    <Property Name="VisitiorPhoto" Type="image" />
+    <Property Name="DepartmentId" Type="varchar" MaxLength="50" />
+    <Property Name="HostID" Type="varchar" MaxLength="150" />
+    <Property Name="EmployeeCode" Type="varchar" MaxLength="30" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="100" />
+    <Property Name="EmployeeMobile" Type="varchar" MaxLength="50" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="UserCreateDate" Type="datetime" />
+    <Property Name="numberOfPerson" Type="int" />
+    <Property Name="PassNumber" Type="varchar" MaxLength="11" />
+    <Property Name="Age" Type="int" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Nationality" Type="varchar" MaxLength="50" />
+    <Property Name="Sex" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="100" />
+    <Property Name="EmpType" Type="varchar" MaxLength="50" />
+    <Property Name="File_Upload" Type="nvarchar" MaxLength="500" />
+    <Property Name="Firm_Tin_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="V_Purpose" Type="varchar" MaxLength="250" />
+    <Property Name="ES_Name" Type="varchar" MaxLength="50" />
+    <Property Name="ES_Rank" Type="varchar" MaxLength="50" />
+    <Property Name="ES_TokenNo" Type="varchar" MaxLength="50" />
+    <Property Name="ES_CardNo" Type="varchar" MaxLength="50" />
+    <Property Name="ES_Dept" Type="varchar" MaxLength="50" />
+    <Property Name="Officer_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Officer_Designation" Type="varchar" MaxLength="50" />
+    <Property Name="DURATION" Type="varchar" MaxLength="50" />
+    <Property Name="OFCR_TOKEN" Type="varchar" MaxLength="50" />
+    <Property Name="OFCR_DEPT" Type="varchar" MaxLength="50" />
+    <Property Name="AADHAR_CARD" Type="varchar" MaxLength="50" />
+    <Property Name="AADHAR_DATA" Type="image" />
+    <Property Name="PAN_CARD" Type="varchar" MaxLength="50" />
+    <Property Name="PAN_CARD_DATA" Type="image" />
+    <Property Name="PASSPORT" Type="varchar" MaxLength="50" />
+    <Property Name="PASSPORT_DATA" Type="image" />
+    <Property Name="DRIVING_LICENCE" Type="varchar" MaxLength="50" />
+    <Property Name="DL_DATA" Type="image" />
+    <Property Name="ID_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_Type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_APPLICATION_FORM_CONTRACTOR_DETAIL">
+    <End Role="CONTRACTOR_DETAIL" Type="PASS_MANAGEMENT_SYSTEMModel.Store.CONTRACTOR_DETAIL" Multiplicity="1" />
+    <End Role="APPLICATION_FORM" Type="PASS_MANAGEMENT_SYSTEMModel.Store.APPLICATION_FORM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRACTOR_DETAIL">
+        <PropertyRef Name="Cont_Id" />
+      </Principal>
+      <Dependent Role="APPLICATION_FORM">
+        <PropertyRef Name="CONT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

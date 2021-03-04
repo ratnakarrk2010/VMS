@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\Eviska\DVSC_Release_Setups\22102018" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/EntityFrameworkDBF.pdb" publishTime="10/22/2018 15:59:07" />
+    <file relUrl="DVSC_HOME.aspx" publishTime="09/10/2018 15:38:49" />
+    <file relUrl="Images/loader.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/Thumb-Green.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/FooterYellow1.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="REPORT_HOME.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/FooterGreen.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Images/SING_CSO.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="bin/FargoNetAPI.dll" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Get_CV_Image.ashx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/Blue.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Styles/templatemo_style.css" publishTime="09/10/2018 15:21:50" />
+    <file relUrl="Images/cctv-systems-about-us-evi.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_content_top_bg.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/sign karan.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Crop/BitMapHandler.txt" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Account/Register.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="CANCELLATION MODULE/CANCEL_HOME.aspx" publishTime="05/29/2018 15:11:15" />
+    <file relUrl="REPORTS/REPORT_HOME.aspx" publishTime="10/22/2018 15:54:31" />
+    <file relUrl="images2/left_arrow.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_button_02.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/HeaderPink.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_project_icon.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/textbox.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery.timepicker.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="REPORTS/TemplateCardStatus.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/Thumb-Red2 - Copy.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/Pink.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/select.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery1.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/SHOP.aspx" publishTime="10/08/2018 13:59:26" />
+    <file relUrl="Site.Master" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="App_Themes/Admin_Basic/SkinFile.skin" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Images/print.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/HeaderBlue.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/New_Visitor.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery-ui.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="RENEWAL/ShowApplication.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="image.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/update.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery.timepicker.css" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_menu_hover_full.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/BAN2.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_button_01.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Account/Web.config" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="RENEWAL/GetImage.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery-1.7.1.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/vm-logo.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/red_light.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/33.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ACTIVATION MODULE/ACTIAVTE_HOME.aspx" publishTime="05/29/2018 14:38:12" />
+    <file relUrl="Images/44.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="RENEWAL/CommanRenew.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Web.config" publishTime="10/22/2018 15:59:07" />
+    <file relUrl="images2/menu_li_bg2.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/Thumb-Red2.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ISSUES MODULE/ISSUE_HOME.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="visitorUpdate.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="RENEWAL/RENEWAL_HOME.aspx" publishTime="09/10/2018 12:36:53" />
+    <file relUrl="Print_ContractorPass.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="RENEWAL/ImageConversions.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="jquery-ui.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/loading51.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/cancel-btn.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/Green.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/HeaderYellow 1.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Crop/_references.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/BAN3.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Crop/modernizr-2.5.3.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/Thumb-Grey2.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Crop/jquery-1.7.1.intellisense.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/green_light.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/loading1.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ImageConversions.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="bin/EntityFrameworkDBF.dll" publishTime="10/22/2018 15:59:07" />
+    <file relUrl="ISSUES MODULE/CONTRACTOR.aspx" publishTime="07/11/2018 11:52:24" />
+    <file relUrl="images2/templatemo_service_1.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/noPhoto.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/delete.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery-1.7.2.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Global.asax" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="bin/Project.Db.dll" publishTime="10/22/2018 15:59:05" />
+    <file relUrl="Print_DBPass.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Account/Login.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="ADMIN PANEL/DOCUMENT.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Print_EscortedPass.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="RENEWAL/CONTRACTOR.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="GetImages.ashx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Styles/jquery-ui-1.8.19.custom.css" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/ADMIN_PANEL_HOME.aspx" publishTime="10/08/2018 14:01:15" />
+    <file relUrl="Images/orange-circle.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/arrow-dn.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/zoom.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="jquery-ui.css" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="VMSMaster.master" publishTime="09/10/2018 17:29:43" />
+    <file relUrl="REPORTS/ReportTemplateCardStatus.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="App_Themes/Admin_Basic/mouseovertabs.css" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="images2/templatemo_menu_hover_right.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="packages.config" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_header_bg.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/STATE.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Universal_imgHandler.ashx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="FOREIGN VISITOR/ForeignVisitor.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/FIRM.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="images2/templatemo_header_bg3.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_menu_hover_left.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/55.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/VMS_psd2.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/Thumb-Green2.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/view-button-png-hi.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/Footer1.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/s3Slider.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="GetApplicationData.ashx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/COUNTRY.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Crop/ImageHandler.txt" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/Red.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/search_magnify.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_banner_bg.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/logo.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/HeaderRed.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/PSU.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Crop/jquery-1.7.1.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_computer.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_service_2.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery.autocomplete.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/HeaderGreen 1.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="GetApplicationImages.ashx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Default.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/green_light.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="bin/AJAXExtensionsToolbox.dll" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="ISSUES MODULE/ImageConversions.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/RELIGION.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="images2/templatemo_menu_hover_full2.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery.timepicker.min.css" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ISSUES MODULE/ShowApplication.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="PRINT/PRINT_HOME.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="UserControls/WebcamResources/save_picture.swf" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/Thumb-Grey.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ACTIVATION MODULE/BULKACTIAVTE_HOME.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="App_Themes/Admin_Basic/lightbox.css" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Images/green-square.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/ROLE.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Images/VMS_psd.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Crop/jquery-1.7.1.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/BAN3.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/arrow-up.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/red-triangle.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_service_1_blank.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_logo.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/Thumb-Org2.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/down.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Crop/jquery.Jcrop.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="bin/Project.Db.pdb" publishTime="10/22/2018 15:59:05" />
+    <file relUrl="Images/textbox4.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_service_2_blank.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/Edit.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/HeaderGreen.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="App_Themes/Admin_Basic/sdmenu.css" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="images2/templatemo_service_3.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="App_Themes/Admin_Basic/commonCSS.css" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="About.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="images2/green_light2.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/FooterYellow.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/Script.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Account/ChangePassword.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_button_02.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/textbox2.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/PASSTYPE.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="images2/templatemo_header_bg2.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Account/ChangePasswordSuccess.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Scripts/jquery-ui-1.8.19.custom.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/menu_li_bg.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery-1.3.2.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="FOREIGN VISITOR/FOR_HOME.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/orange-circle.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_list_icon.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/FooterPink - Copy.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/textbox1.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/FooterBlue.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="DESIGNATION.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_menu_hover_full3.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_header_bg_rev.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/biometric-readers-logo-latest.gif" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="FOREIGN VISITOR/visitorUpdate.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/VMS_psd.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/22.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/sign karan only.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery.timepicker.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="App_Themes/Admin_Basic/menu.css" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="images2/Thumb-Org.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Crop/jquery-ui-1.8.20.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="App_Themes/Admin_Basic/Style12.css" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="images2/red_light2.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Styles/Site.css" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_frame_01.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/Plus.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Get_CVImages.ashx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/11.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="LOGIN.aspx" publishTime="09/10/2018 16:40:57" />
+    <file relUrl="Images/red_light.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/FooterYellow - Copy.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="jquery.min.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/expand.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="PrintPass_ForeignVisitor.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/USERMASTER.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="ADMIN PANEL/DESIGNATION.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="images2/right_arrow.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/VMS_psd2.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/textbox3.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_image_01.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/templatemo_service_3_blank.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/refresh-btn.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="VisitorVPass.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="ADMIN PANEL/CANCELREASON.aspx" publishTime="05/03/2018 17:05:00" />
+    <file relUrl="Crop/jquery-ui-1.8.20.js" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Scripts/jquery-ui.css" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/FooterPink.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Crop/jquery.Jcrop.css" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Images/HeaderYellow.jpg" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Print_BankPass.aspx" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="images2/BAN1.png" publishTime="05/03/2018 17:06:00" />
+    <file relUrl="Operator_Home.aspx" publishTime="05/03/2018 17:06:00" />
+  </publishProfile>
+</publishData>
